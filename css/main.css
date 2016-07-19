@@ -140,17 +140,23 @@ p {
     border-radius: 100px;
     background: #7185d1;
     text-align: center;
-    vertical-align: middle;
-    display: table-cell;
     color: #fff;
     font-size: 70px;
-    margin: auto 0;
+    margin-left: 45px;
+}
+
+#directions > div > div.ellipse > i {
+    margin-top: 60px;
 }
 
 #directions > div > p.sectitle {
     font-size: 24px!important; 
     color: #838383;
     margin-bottom: 0px;
+}
+
+#branches {
+    margin: 20px;
 }
 
 /* DEFINITIONS FOR CLASSES */
@@ -163,4 +169,5 @@ p {
 .title {
     font-weight: normal;
     color: #7185d1;
+    font-size: 28px;
 }
