@@ -1,0 +1,141 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block main %}
+<div id="about">
+    <div class="slider">
+        <ul>
+            <li>
+                <img src="{% static 'images/slider/2.jpg' %}" alt="image02" />
+            </li>
+            <li>
+                <img src="{% static 'images/slider/3.jpg' %}" alt="image03" />
+            </li>
+            <li>
+                <img src="{% static 'images/slider/4.jpg' %}" alt="image03" />
+            </li>                    
+            <li>
+                <img src="{% static 'images/slider/1.jpg' %}" alt="image01" />
+            </li>
+        </ul>
+    </div>
+    <!--<img src="images/worker.png" />-->
+    <div id="abouttext">
+        <h1 class="title"> О компании </h1>
+        <p> ООО «Карбон-Сервис» специализируется на монтаже и наладке процессного и упаковочного 
+        оборудования на предприятиях пищевой, косметической и фармацевтической промышленностях. </p> 
+        <p> Имея 24-летний опыт работы в данной области, мы предлагаем смелые конструктивные 
+        решения, которые позволяют сократить время монтажа и тем самым выиграть в сроках 
+        реализации всего проекта.   </p>
+        <button> Связаться с нами </button>
+    </div>
+</div>    
+<div id="directions">
+    <div>
+        <div class="ellipse">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
+        <p class="sectitle">
+            Пищевая отрасль
+        </p>
+        <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+            vitae mauris vitae justo tincidunt luctus. Phasellus a posuere nisi. 
+            Fusce eget dolor in magna auctor ultricies.
+        </p>
+    </div>
+    <div>
+        <div class="ellipse">
+            <i class="fa fa-medkit" aria-hidden="true"></i>
+        </div>
+        <p class="sectitle">
+            Фармацевтика
+        </p>
+        <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+            vitae mauris vitae justo tincidunt luctus. Phasellus a posuere nisi. 
+            Fusce eget dolor in magna auctor ultricies.
+        </p>
+    </div>
+    <div>
+        <div class="ellipse">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <p class="sectitle">
+            Косметика
+        </p>
+        <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+            vitae mauris vitae justo tincidunt luctus. Phasellus a posuere nisi. 
+            Fusce eget dolor in magna auctor ultricies.
+        </p>
+    </div>
+</div>      
+<div id="branches">
+    <p class="title"> Филиалы </p>
+    <p> Компания «Карбон-Сервис» имеет филиалы в таких странах, как Германия, Украина, Бразилия. Руководство компании работает в 
+        направлении оптимизации реализации проектов, координирует выполнение проектов в реальном времени и всегда находится в 
+        контакте со своими клиентами.
+    </p> 
+    <div>
+        <img src="{% static 'images/Russia.png' %}" />
+        <p>
+            ООО «Кабон-сервис Россия» <br />
+            Россия, 127322, г. Москва,<br />
+            Огородный проезд, д. 20,  <br />
+            Тел./факс: +7(495)789-0918<br />
+            +7(499)760-5308           <br />
+            Web: www.carbon-service.ru<br />
+            E-mail: info@carbon-service.ru
+        </p>
+    </div>
+    <div>
+        <img src="{% static 'images/Germany.png' %}" />
+        <p>
+            CARBON-SERVICE<br />
+            Deutschland GmbH<br />
+            Ihlenfelder Str. 51, D-17034<br />
+            Neubrandenburg<br />
+            Phone: +49 395 4228289<br />
+            Fax: +49 395 4555668<br />
+            E-mail: <br />
+            info@carbon-service-gmbh.eu
+        </p>
+    </div>
+    <div>
+        <img src="{% static 'images/Ukraine.png' %}" />
+        <p>
+            ООО «Карбон Сервис Украина»<br />
+            Украина, г. Днепропетровск,<br />
+            площадь Красная, д. 3, кв. 16<br />
+            Тел: +38 056 375 23 75<br />
+                    +38 056 375 23 75<br />
+            E-mail: <br />
+            carbon.service@vega.com.ua
+        </p>
+    </div>          
+    <div>
+        <img src="{% static 'images/Brazil.png' %}" />
+        <p>
+            CARBON SERVICE DO BRASIL<br />
+            SERVICOS INDUSTRIAIS LTDA<br />
+            Rua Franz De Catro Holzwarth,<br />
+            103, room 313, Jacarei, Brasil, CEP.
+            12300.000<br />
+            Phone: +55 12 - 3951.14.75<br />
+            +55 12 - 3952.59.83<br />
+            E-mail: <br />
+            vendas@carbonservice.com.br
+        </p>
+    </div>
+</div>       
+<div id="partners">
+    <p class="title">Наши партнёры</p>
+    <p>
+        Сегодня компании «Карбон-Сервис» выполняет монтаж оборудования, поставляемого ведущими производителями на передовых 
+        предприятиях компаний производителей продукции:
+    </p>
+    <p> 
+        а тут типа картинки с логотипами партнёров
+    </p>
+</div>
+{% endblock %}

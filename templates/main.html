@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="{% static 'css/fa-min.css' %}">
+{% endblock %}
+{% block title %}CARBON-SERVICE{% endblock %}
+{% block content %}	
+<!-- Header bar -->
+<div id="header">
+        <div id="menu">
+            <img src="{% static 'images/logo.png' %}" />
+            <ul>
+                <li>
+                    <a>О компании</a>
+                </li>
+                <li>
+                    <a>Новости</a>
+                </li>
+                <li>
+                    <a>Фотогалерея</a>
+                </li>
+                <li>
+                    <a>Контакты</a>
+                </li>
+                <li class="limg">
+                    <img src="{% static 'images/Germany-Round.png' %}" height="30" />
+                </li>
+                <li class="limg">
+                    <img src="{% static 'images/United-Kingdom-Round.png' %} " height="30" />
+                </li>
+            </ul>
+        </div>
+</div>
+
+<!-- Main content of a page -->
+<div id="content">
+	{% block main %}
+	{% endblock %}
+</div>
+
+<div id="footer">
+(c) 2016 ООО "Карбон-Сервис"
+</div>
+{% endblock %}
