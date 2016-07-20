@@ -27,12 +27,12 @@ button {
     font-family: "Open Sans", Arial, sans-serif !important;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 20px;
     color: #fff;
     background: #7185d1;
     border: none;
     letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 14px;
     margin: 5px 0;
 }
 
@@ -106,7 +106,8 @@ p {
 #footer {
     border-top: 1px solid #e1e1e1;
     color: #cecece;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin: 20px;
 }
 
 #about {
@@ -156,7 +157,29 @@ p {
 }
 
 #branches {
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#branches > p.title {
+    margin-bottom: 0px;
+}
+
+#branches > div {
+    vertical-align: top;
+    padding-top: 20px;
+    width: 230px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+#partners > p.title {
+    margin-bottom: 0px;
+}
+
+#partners {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* DEFINITIONS FOR CLASSES */
