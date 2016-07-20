@@ -115,10 +115,12 @@ p {
 }
 
 #footer {
+    width: 1040px;
     border-top: 1px solid #e1e1e1;
     color: #cecece;
     padding: 20px 0;
-    margin: 20px;
+    margin: 0 auto;
+    background: #fff;
 }
 
 #about {
@@ -249,6 +251,18 @@ p {
     top: 0;
 }
 
+#about > div.slider > ul > li > p {
+    position: absolute; 
+    z-index: 12; 
+    top: 224px; 
+    font-size: 12px; 
+    width: 280px; 
+    height: 60px; 
+    padding: 7px 10px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    line-height: 1.4em;
+}
+
 /* SLIDER PART ENDBLOCK */
 
 #about > div + div {
@@ -261,10 +275,15 @@ p {
     margin-top: 40px;
 }
 
+#directions > p {
+    margin: 15px 20px;
+}
+
 #directions > div {
     width: 290px;
     margin: 20px;
     display: inline-block;
+    vertical-align: top;
 }
 
 #directions > div > div.ellipse {
