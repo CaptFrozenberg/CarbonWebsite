@@ -36,6 +36,16 @@ button {
     margin: 5px 0;
 }
 
+button:hover {
+    background: #8195e1;
+    cursor: pointer;
+}
+
+button:active {
+    background: #6175c1;
+    cursor: pointer;
+}
+
 p {
     line-height: 1.7em;
 }
@@ -49,6 +59,7 @@ p {
     margin: 0;
     background: #7185d1;
     position: fixed;
+    z-index: 10;
 }
 
 #menu {
@@ -114,19 +125,79 @@ p {
     margin-top: 20px;
 }
 
-#about > img {
+#about > div.slider {
     width: 300px;
-    margin: 20px 50px;
+    margin: 10px 50px;
     display: inline-block;
+    position: relative;
+    height: 300px;
 }
 
-#about > div {
+#about > div.slider > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#about > div.slider > ul > li {
+    margin: 0px;
+    padding: 0px;
+    opacity: 0; 
+    -moz-animation-name: anim_slides;
+    -moz-animation-duration: 24.0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+}
+
+@-moz-keyframes anim_slides {
+    0% {
+        opacity:0;
+    }
+    6% {
+        opacity:1;
+    }
+    24% {
+        opacity:1;
+    }
+    30% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+#about > div.slider > ul > li:nth-child(2) {
+    -webkit-animation-delay: 6.0s;
+    -moz-animation-delay: 6.0s;
+}
+#about > div.slider > ul > li:nth-child(3) {
+    -webkit-animation-delay: 12.0s;
+    -moz-animation-delay: 12.0s;
+}
+#about > div.slider > ul > li:nth-child(4) {
+    -webkit-animation-delay: 18.0s;
+    -moz-animation-delay: 18.0s;
+}
+
+#about > div.slider > ul > li > img {
+    width: 300px;
+    position: absolute;
+    top: 0;
+}
+
+#about > div + div {
     display: inline-block;
     width: 550px;
+    vertical-align: top;
 }
 
 #directions {
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 #directions > div {
