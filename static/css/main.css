@@ -29,7 +29,7 @@ button {
     font-weight: bold;
     padding: 10px 20px;
     color: #fff;
-    background: #7185d1;
+    background: #5369bd;
     border: none;
     letter-spacing: 1px;
     font-size: 14px;
@@ -57,7 +57,7 @@ p {
     width: 100%;
     height: 50px;
     margin: 0;
-    background: #7185d1;
+    background: #5369bd;
     position: fixed;
     z-index: 10;
 }
@@ -290,7 +290,7 @@ p {
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    background: #7185d1;
+    background: #5369bd;
     text-align: center;
     color: #fff;
     font-size: 70px;
@@ -333,6 +333,12 @@ p {
     margin-right: 20px;
 }
 
+#news {
+    margin-left: 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+
 /* DEFINITIONS FOR CLASSES */
 
 .limg {
@@ -342,6 +348,43 @@ p {
 
 .title {
     font-weight: normal;
-    color: #7185d1;
+    color: #5369bd;
     font-size: 28px;
+}
+
+.article {
+    padding: 20px 0;
+    border-top: 1px solid #dfdfdf;
+}
+
+.article > div.articleinfo > div.datetime {
+    padding-top: 10px;
+    color: #5369bd;
+}
+
+.article > img {
+    display: inline-block;
+    width: 150px;
+    border-radius: 75px;
+}
+
+.article > div.articleinfo {
+    display: inline-block;
+    width: 720px;
+    padding: 0 20px;
+    vertical-align: top;
+}
+
+.article > div.articleinfo > div.newstitle {
+    color: #5369bd;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.article > div.articleinfo > div.content {
+    display: block;
+    line-height: 1.7em;
 }
