@@ -106,7 +106,7 @@ p {
 #content {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 240px;
+    margin-top: 140px;
     display: block;
     width: 1000px;
     padding: 20px;
@@ -115,10 +115,10 @@ p {
 }
 
 #footer {
-    width: 1040px;
+    width: 1000px;
     border-top: 1px solid #e1e1e1;
     color: #cecece;
-    padding: 20px 0;
+    padding: 20px;
     margin: 0 auto;
     background: #fff;
 }
