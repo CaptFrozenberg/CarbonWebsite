@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% block additional_css %}
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -12,23 +13,71 @@
             <img src="{% static 'images/logo.png' %}" />
             <ul>
                 <li>
-                    <a>О компании</a>
+                    <a>{% trans 'О компании' %}</a>
                 </li>
                 <li>
-                    <a>Новости</a>
+                    <a>{% trans 'Новости' %}</a>
                 </li>
                 <li>
-                    <a>Фотогалерея</a>
+                    <a>{% trans 'Фотогалерея' %}</a>
                 </li>
                 <li>
-                    <a>Контакты</a>
+                    <a>{% trans 'Контакты' %}</a>
                 </li>
-                <li class="limg">
-                    <img src="{% static 'images/Germany-Round.png' %}" height="30" />
+                {% get_current_language as LANGUAGE_CODE %}
+                {% if LANGUAGE_CODE == 'en' %}
+                <li>
+                    <form action="/i18n/setlang/" method="POST">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" /><br/>
+                        <input name="language" type="hidden" value="ru" /><br/>
+                        <input class="limg" type="image" src="{% static 'images/Russia-Round.png' %}" alt="Submit" height="30">
+                    </form>
                 </li>
-                <li class="limg">
-                    <img src="{% static 'images/United-Kingdom-Round.png' %} " height="30" />
+                <li>
+                    <form action="/i18n/setlang/" method="POST">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" /><br/>
+                        <input name="language" type="hidden" value="de" /><br/>
+                        <input class="limg" type="image" src="{% static 'images/Germany-Round.png' %}" alt="Submit" height="30">
+                    </form>
                 </li>
+                {% elif LANGUAGE_CODE == 'de' %}
+                <li>
+                    <form action="/i18n/setlang/" method="POST">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" /><br/>
+                        <input name="language" type="hidden" value="ru" /><br/>
+                        <input class="limg" type="image" src="{% static 'images/Russia-Round.png' %}" alt="Submit" height="30">
+                    </form>
+                </li>
+                <li>
+                    <form action="/i18n/setlang/" method="POST">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" /><br/>
+                        <input name="language" type="hidden" value="en" /><br/>
+                        <input class="limg" type="image" src="{% static 'images/United-Kingdom-Round.png' %}" alt="Submit" height="30">
+                    </form>
+                </li>                
+                {% else %}
+                <li>
+                    <form action="/i18n/setlang/" method="POST">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" /><br/>
+                        <input name="language" type="hidden" value="en" /><br/>
+                        <input class="limg" type="image" src="{% static 'images/United-Kingdom-Round.png' %}" alt="Submit" height="30">
+                    </form>
+                </li>
+                <li>
+                    <form action="/i18n/setlang/" method="POST">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/" /><br/>
+                        <input name="language" type="hidden" value="de" /><br/>
+                        <input class="limg" type="image" src="{% static 'images/Germany-Round.png' %}" alt="Submit" height="30">
+                    </form>
+                </li>
+                {% endif %}
+                
             </ul>
         </div>
 </div>
@@ -40,6 +89,6 @@
 </div>
 
 <div id="footer">
-(c) 2016 ООО "Карбон-Сервис"
+(c) 2016 CARBON-SERVICE All rights reserved.
 </div>
 {% endblock %}
