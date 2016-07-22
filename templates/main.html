@@ -10,10 +10,12 @@
 <!-- Header bar -->
 <div id="header">
         <div id="menu">
-            <img src="{% static 'images/logo.png' %}" />
+            <a href="{% url 'main' %}">
+                <img src="{% static 'images/logo.png' %}" />
+            </a>
             <ul>
                 <li>
-                    <a>{% trans 'О компании' %}</a>
+                    <a href="{% url 'main' %}">{% trans 'О компании' %}</a>
                 </li>
                 <li>
                     <a>{% trans 'Новости' %}</a>
@@ -22,7 +24,7 @@
                     <a>{% trans 'Фотогалерея' %}</a>
                 </li>
                 <li>
-                    <a>{% trans 'Контакты' %}</a>
+                    <a href="{% url 'contact' %}">{% trans 'Контакты' %}</a>
                 </li>
                 {% get_current_language as LANGUAGE_CODE %}
                 {% if LANGUAGE_CODE == 'en' %}
