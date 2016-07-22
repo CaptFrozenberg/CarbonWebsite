@@ -1,0 +1,110 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block main %}    
+<div id="contacts">
+    <p class="title">
+        Контакты
+    </p>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fY35A_q6pcCA9sHXU6kAN4tyfTzpULSB&amp;width=600&amp;height=338&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+</div>
+
+<div class="contacttext">
+    <p class="capstitle">
+        Телефоны
+    </p>
+    <div class="cont">
+        <p>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            &nbsp;
+            +7 (499) 760-53-08
+        </p>
+        <p>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            &nbsp;
+            +7 (495) 783-09-18
+        </p>
+
+    </div>
+    <p class="capstitle">
+        Адрес главного офиса
+    </p>
+    <div class="cont">
+        <p>
+            <font style="font-size: 14px; font-weight: normal;line-height: 1em!important;"> 
+                г.Москва, 127322, Огородный проезд, 20
+            </font>
+        </p>
+    </div>
+</div>
+
+<div id="branches">
+    <p class="title"> Все офисы </p>
+    <div>
+        <img src="{% static 'images/Russia.png' %}" />
+        <p>
+            ООО «Кабон-сервис Россия» <br />
+            Россия, 127322, г. Москва,<br />
+            Огородный проезд, д. 20,  <br />
+            Тел./факс: +7(495)789-0918<br />
+            +7(499)760-5308           <br />
+            Web: www.carbon-service.ru<br />
+            E-mail: info@carbon-service.ru
+        </p>
+    </div>
+    <div>
+        <img src="{% static 'images/Germany.png' %}" />
+        <p>
+            CARBON-SERVICE<br />
+            Deutschland GmbH<br />
+            Ihlenfelder Str. 51, D-17034<br />
+            Neubrandenburg<br />
+            Phone: +49 395 4228289<br />
+            Fax: +49 395 4555668<br />
+            E-mail: <br />
+            info@carbon-service-gmbh.eu
+        </p>
+    </div>
+    <div>
+        <img src="{% static 'images/Ukraine.png' %}" />
+        <p>
+            ООО «Карбон Сервис Украина»<br />
+            Украина, г. Днепропетровск,<br />
+            площадь Красная, д. 3, кв. 16<br />
+            Тел: +38 056 375 23 75<br />
+                    +38 056 375 23 75<br />
+            E-mail: <br />
+            carbon.service@vega.com.ua
+        </p>
+    </div>          
+    <div>
+        <img src="{% static 'images/Brazil.png' %}" />
+        <p>
+            CARBON SERVICE DO BRASIL<br />
+            SERVICOS INDUSTRIAIS LTDA<br />
+            Rua Franz De Catro Holzwarth,<br />
+            103, room 313, Jacarei, Brasil, CEP.
+            12300.000<br />
+            Phone: +55 12 - 3951.14.75<br />
+            +55 12 - 3952.59.83<br />
+            E-mail: <br />
+            vendas@carbonservice.com.br
+        </p>
+    </div>
+</div>    
+
+<div id="sayhello">
+    <p class="title">
+        Напишите нам
+    </p>
+    <div class="contactform">
+        <input id="name" placeholder="Имя"></input>
+        <input id="e-mail" placeholder="E-mail"></input>
+        <input id="title" placeholder="Тема сообщения"></input>
+        <textarea id="text" placeholder="Текст сообщения"></textarea>
+        <button id="submit">Отправить сообщение</button>
+        <p>
+            info@carbon-service.ru
+        </p>
+    </div>
+</div>
+{% endblock %}

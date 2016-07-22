@@ -282,6 +282,7 @@ p {
 #directions > div {
     width: 290px;
     margin: 20px;
+    padding-top: 20px;
     display: inline-block;
     vertical-align: top;
 }
@@ -334,10 +335,21 @@ p {
 }
 
 #news {
-    margin-left: 40px;
+    margin-left: 20px;
     display: inline-block;
     vertical-align: top;
 }
+
+#contacts {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+#sayhello {
+    margin-left: 20px;
+    display: inline-block;
+}
+
 
 /* DEFINITIONS FOR CLASSES */
 
@@ -387,4 +399,88 @@ p {
 .article > div.articleinfo > div.content {
     display: block;
     line-height: 1.7em;
+}
+
+.contactform {
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.contactform > input {
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.contactform > textarea {
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+    width: 560px;
+    height: 100px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: none;
+}
+
+.contactform > input#name {
+    width: 250px;
+}
+
+.contactform > input#e-mail {
+    width: 250px;
+    float: right;
+}
+
+.contactform > input#title {
+    width: 560px;
+}
+
+.contactform > p {
+    display: inline-block;
+    margin-left: 20px;
+    color:  #5369bd;
+    letter-spacing: 1px;
+}
+
+.contacttext {
+    background: #5369bd;
+    color: #fff;
+    display: inline-block;
+    width: 280px;
+    vertical-align: top;
+    margin-top: 102px;
+    margin-left: 20px;
+    padding: 0 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.capstitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid #cecece;
+    padding: 10px 0;
+}
+
+.contacttext > div.cont > p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.cont {
+    margin-bottom: 20px;
+}
+
+.fordrivers {
+    margin-left: 20px;
 }
