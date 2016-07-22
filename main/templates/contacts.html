@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load i18n %}
 {% load staticfiles %}
 {% block main %}    
 <div id="contacts">
@@ -97,14 +98,28 @@
         Напишите нам
     </p>
     <div class="contactform">
-        <input id="name" placeholder="Имя"></input>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.contact_name.errors }}
+            {{ form.contact_name}}
+            {{ form.contact_email.errors }}
+            {{ form.contact_email}}
+            {{ form.subject.errors }}
+            {{ form.subject}}
+            {{ form.content.errors }}
+            {{ form.content}}            
+            <input id="submit" type="submit" value="Отправить сообщение" />
+        </form>
+        <!-- <input id="name" placeholder="Имя"></input>
         <input id="e-mail" placeholder="E-mail"></input>
         <input id="title" placeholder="Тема сообщения"></input>
         <textarea id="text" placeholder="Текст сообщения"></textarea>
         <button id="submit">Отправить сообщение</button>
         <p>
             info@carbon-service.ru
-        </p>
+        </p> -->
+        
     </div>
 </div>
 {% endblock %}

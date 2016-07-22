@@ -47,7 +47,9 @@
             реализации всего проекта.
         {% endblocktrans %}
         </p>
-        <button>{% trans 'Связаться с нами' %}</button>
+        <a href="{% url 'contact' %}">
+            <button >{% trans 'Связаться с нами' %}</button>
+        </a>
     </div>
 </div>    
 <div id="directions">
