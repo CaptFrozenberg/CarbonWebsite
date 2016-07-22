@@ -76,7 +76,7 @@ p {
 #menu > ul {
     float: right;
     padding: 0;
-    margin: 14px 0;
+    margin: 5px 0;
     display: inline-block;
 }
 
@@ -87,6 +87,7 @@ p {
     list-style: none;
     display: inline-block;
     margin: 0 15px;
+    vertical-align: middle;
 }
 
 #menu > ul > li:hover {
@@ -355,7 +356,6 @@ p {
 
 .limg {
     margin-right: -5px !important;
-    margin-left: 15px !important;
 }
 
 
