@@ -28,7 +28,7 @@
                 </li>
                 {% get_current_language as LANGUAGE_CODE %}
                 {% if LANGUAGE_CODE == 'en' %}
-                <li>
+                <li class="spressed">
                     <form action="/i18n/setlang/" method="POST">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="/" />
@@ -36,7 +36,7 @@
                         <input class="limg" type="image" src="{% static 'images/Russia-Round.png' %}" alt="Submit" height="30">
                     </form>
                 </li>
-                <li>
+                <li class="spressed">
                     <form action="/i18n/setlang/" method="POST">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="/" />
@@ -45,7 +45,7 @@
                     </form>
                 </li>
                 {% elif LANGUAGE_CODE == 'de' %}
-                <li>
+                <li class="spressed">
                     <form action="/i18n/setlang/" method="POST">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="/" />
@@ -53,7 +53,7 @@
                         <input class="limg" type="image" src="{% static 'images/Russia-Round.png' %}" alt="Submit" height="30">
                     </form>
                 </li>
-                <li>
+                <li class="spressed">
                     <form action="/i18n/setlang/" method="POST">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="/" />
@@ -62,7 +62,7 @@
                     </form>
                 </li>                
                 {% else %}
-                <li>
+                <li class="spressed">
                     <form action="/i18n/setlang/" method="POST">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="/" />
@@ -70,7 +70,7 @@
                         <input class="limg" type="image" src="{% static 'images/United-Kingdom-Round.png' %}" alt="Submit" height="30">
                     </form>
                 </li>
-                <li>
+                <li class="spressed">
                     <form action="/i18n/setlang/" method="POST">
                         {% csrf_token %}
                         <input name="next" type="hidden" value="/" />
@@ -79,7 +79,6 @@
                     </form>
                 </li>
                 {% endif %}
-                
             </ul>
         </div>
 </div>

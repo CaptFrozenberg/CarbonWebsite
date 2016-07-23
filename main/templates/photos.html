@@ -3,16 +3,27 @@
 {% block main %}    
 <div id="news">    
     <p class="title">Фотогалерея</p>
+    <div id="popup" onclick="Close(this)" >
+        <div>
+            <img src="" />
+            <p> Описание картинки. Очень длинное, чтобы можно было увидеть, как себя поведут элементы, 
+            если вот прямо сюда понаписать очень много букв. А потом в конец предложения дописать ещё 
+            несколько букв. А потом написать целый рассказ о том, как ты писал много букв в описание 
+            к картинке. Зачем? </p>
+            <i class="fa fa-close" aria-hidden="true"></i>
+        </div>
+    </div>
     <script>
         function Open(div) {
-            var src = (div.children[1]).src;
             var popup = document.getElementById('popup');
-            popup.setAttribute("style", "display: block;");
-            //window.open(src);
+            popup.setAttribute("style", "visibility: visible; opacity: 1;");
+            popup.children[0].children[0].src = div.children[1].src;
+        }       
+        function Close(div) {
+            div.setAttribute("style", "opacity: 0; visibility: hidden; transition: visibility 0.21s, opacity 0.2s linear;");
         }
     </script>
-    
-    <!-- PHOTOS ITEM BLOCK -->
+    <!-- PHOTO EXAMPLE BLOCK -->
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
         <img src="{% static 'images/slider/1.jpg' %}" />
@@ -28,12 +39,21 @@
         </div>
     </div>
     <!-- ENDBLOCK -->
-    
-    <div id="popup">
-        <center>
-            <img src="{% static 'images/slider/1.jpg' %}" />
-        </center>
+    <!-- PHOTO EXAMPLE BLOCK -->
+    <div class="photo" onclick="Open(this)" >
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        <img src="{% static 'images/slider/2.jpg' %}" />
+        <div>
+            <p>
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                23.07.2016
+            </p>
+            <p>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                15:09
+            </p>
+        </div>
     </div>
-    
+    <!-- ENDBLOCK -->
 </div>
 {% endblock %}
