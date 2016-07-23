@@ -6,4 +6,4 @@ class News(models.Model):
     pub_date = models.DateField(verbose_name='Дата публикации')
     short_content = models.TextField(max_length=200, verbose_name='Краткое содержание')
     content = models.TextField(verbose_name='Содержание')
-    language = models.CharField(max_length=20, choices=settings.LANGUAGES)
+    #language = models.CharField(max_length=20, choices=settings.LANGUAGES)
