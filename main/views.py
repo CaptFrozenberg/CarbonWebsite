@@ -23,3 +23,6 @@ class ContactView(FormView, LangListMixin):
         form.send_email()
         # print "form is valid"
         return super(ContactView, self).form_valid(form)
+
+class NewsView(TemplateView):
+    template_name = 'news.html'
