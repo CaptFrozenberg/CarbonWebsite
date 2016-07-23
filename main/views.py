@@ -30,3 +30,6 @@ class ContactView(FormView, LangListMixin):
 
 class NewsView(TemplateView):
     template_name = 'news.html'
+
+class GaleryView(TemplateView):
+    template_name = 'photos.html'
