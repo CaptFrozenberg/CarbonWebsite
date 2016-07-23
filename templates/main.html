@@ -10,7 +10,9 @@
 <!-- Header bar -->
 <div id="header">
         <div id="menu">
-            <img src="{% static 'images/logo.png' %}" />
+            <a href="{% url 'main' %}">
+                <img src="{% static 'images/logo.png' %}" />
+            </a>
             <ul>
                 <li>
                     <a href="{% url 'main' %}">{% trans 'О компании' %}</a>

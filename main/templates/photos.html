@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block main %}    
+<div id="news">    
+    <p class="title">Фотогалерея</p>
+    <script>
+        function Open(div) {
+            var src = (div.children[1]).src;
+            var popup = document.getElementById('popup');
+            popup.setAttribute("style", "display: block;");
+            //window.open(src);
+        }
+    </script>
+    
+    <!-- PHOTOS ITEM BLOCK -->
+    <div class="photo" onclick="Open(this)" >
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        <img src="{% static 'images/slider/1.jpg' %}" />
+        <div>
+            <p>
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                23.07.2016
+            </p>
+            <p>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                15:09
+            </p>
+        </div>
+    </div>
+    <!-- ENDBLOCK -->
+    
+    <div id="popup">
+        <center>
+            <img src="{% static 'images/slider/1.jpg' %}" />
+        </center>
+    </div>
+    
+</div>
+{% endblock %}
