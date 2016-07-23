@@ -140,3 +140,19 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# e-mail settings
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "captfrozenberg@gmail.com"
+# EMAIL_HOST_PASSWORD = "1997Vzlet"
+# EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "rodionov.zenitem@yandex.ru"
+EMAIL_HOST_PASSWORD = "Sveta2015SH"
+EMAIL_USE_SSL = True
+
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

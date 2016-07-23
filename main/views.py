@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.urlresolvers import reverse
 
 from django.views.generic.base import TemplateView
 from django.views.generic import FormView
@@ -23,6 +24,9 @@ class ContactView(FormView, LangListMixin):
         form.send_email()
         # print "form is valid"
         return super(ContactView, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse('main')
 
 class NewsView(TemplateView):
     template_name = 'news.html'

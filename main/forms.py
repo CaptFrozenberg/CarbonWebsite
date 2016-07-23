@@ -14,8 +14,10 @@ class ContactForm(forms.Form):
 
     def send_email(self):
         subject = self.cleaned_data['subject']
-        content = self.cleaned_data['content']
+        contact_name = self.cleaned_data['contact_name']
         contact_email = self.cleaned_data['contact_email']
-        recipients = ['info@carbon-service.ru']
-        send_mail(subject, content, contact_email, recipients)
-
+        content = '{0} \n\n{1}: {2} \n\n{3}, {4} '.format(self.cleaned_data['content'], _('Ответить на адрес'),
+                                                      contact_email, _('С наилучшими пожеланиями'), contact_name)
+        sender_email = 'rodionov.zenitem@yandex.ru'
+        recipients = ['captfrozenberg@gmail.com']
+        send_mail(subject, content, sender_email, recipients)
