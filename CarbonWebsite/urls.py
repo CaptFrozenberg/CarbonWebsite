@@ -25,7 +25,6 @@ urlpatterns = solid_i18n_patterns(
     url(r'^admin/', admin.site.urls),
     url(r'^', include('main.urls')),
     url(r'^', include('news.urls')),
-    url(r'^', include('galery.urls')),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
