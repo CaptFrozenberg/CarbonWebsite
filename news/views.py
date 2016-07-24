@@ -10,6 +10,4 @@ class NewsView(TemplateView):
         lang_code = get_language_from_request(self.request, check_path=True)
         context = super(NewsView, self).get_context_data(**kwargs)
         context['news_list'] = News.objects.filter(language=lang_code)
-        print(len(News.objects.filter(language=lang_code)))
-        print(lang_code)
         return context
