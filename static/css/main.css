@@ -120,8 +120,8 @@ p {
     margin-right: auto;
     margin-top: 140px;
     display: block;
-    width: 1000px;
-    padding: 20px;
+    max-width: 960px;
+    padding: 20px 40px;
     background: #fff;
     min-height: 700px;
 }
@@ -141,7 +141,7 @@ p {
 
 #about > div.slider {
     width: 300px;
-    margin: 0 50px 0 20px;
+    margin: 0 50px 0 0;
     display: inline-block;
     position: relative;
     height: 300px;
@@ -182,7 +182,6 @@ p {
 }
 
 /* SLIDER PART */
-
 @-webkit-keyframes anim_slides {
     0% {
         opacity:0;
@@ -200,7 +199,6 @@ p {
         opacity:0;
     }
 }
-
 @-moz-keyframes anim_slides {
     0% {
         opacity:0;
@@ -218,7 +216,6 @@ p {
         opacity:0;
     }
 }
-
 @keyframes anim_slides {
     0% {
         opacity:0;
@@ -236,7 +233,6 @@ p {
         opacity:0;
     }
 }
-
 #about > div.slider > ul li {
     margin: 0px;
     padding: 0px;
@@ -268,7 +264,6 @@ p {
     -moz-animation-play-state: running;
     -moz-animation-fill-mode: forwards;
 }
-
 #about > div.slider > ul > li:nth-child(2) {
     -webkit-animation-delay: 5.0s;
     -moz-animation-delay: 5.0s;
@@ -281,13 +276,11 @@ p {
     -webkit-animation-delay: 15.0s;
     -moz-animation-delay: 15.0s;
 }
-
 #about > div.slider > ul > li > img {
     width: 300px;
     position: absolute;
     top: 0;
 }
-
 #about > div.slider > ul > li > p {
     position: absolute; 
     z-index: 12; 
@@ -299,7 +292,6 @@ p {
     background-color: rgba(255, 255, 255, 0.8); 
     line-height: 1.4em;
 }
-
 /* SLIDER PART ENDBLOCK */
 
 #about > div + div {
@@ -312,13 +304,9 @@ p {
     margin-top: 20px;
 }
 
-#directions > p {
-    margin: 15px 20px;
-}
-
 #directions > div {
     width: 290px;
-    margin: 20px;
+    margin: 10px;
     padding-top: 20px;
     display: inline-block;
     vertical-align: top;
@@ -332,7 +320,7 @@ p {
     text-align: center;
     color: #fff;
     font-size: 70px;
-    margin-left: 45px;
+    margin: 0 auto;
 }
 
 #directions > div > div.ellipse > i {
@@ -340,14 +328,9 @@ p {
 }
 
 #directions > div > p.sectitle {
-    font-size: 24px!important; 
+    font-size: 26px!important; 
     color: #838383;
     margin-bottom: 0px;
-}
-
-#branches {
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 #branches > p.title {
@@ -366,15 +349,10 @@ p {
     margin-bottom: 0px;
 }
 
-#partners {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 #news {
-    margin-left: 20px;
     display: inline-block;
     vertical-align: top;
+    width: 100%;
 }
 
 #contacts {
@@ -383,18 +361,13 @@ p {
     height: 450px;
 }
 
-#sayhello {
-    margin-left: 20px;
-    display: inline-block;
-}
-
 #popup {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 20;
     visibility: hidden;
     opacity: 0;
@@ -407,9 +380,9 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    padding: 20px;
-    padding-top: 40px;
-    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    padding-bottom: 20px;
+    background: #fff;
     border-radius: 5px;
 }
 
@@ -421,9 +394,10 @@ p {
 }
 
 #popup > div > p {
-    color: #fff;
+    color: #000;
     text-align: center;
     font-size: 13px;
+    max-width: 450px;
 }
 
 #popup > div > i.fa-close {
@@ -491,7 +465,7 @@ p {
 
 .article > div.articleinfo {
     display: inline-block;
-    width: 720px;
+    width: 75%;
     padding: 0 20px;
     vertical-align: top;
 }
@@ -598,7 +572,6 @@ p {
     height: 320px;
     vertical-align: top;
     margin-top: 78px;
-    margin-right: 20px;
     padding: 0 20px 20px 20px;
     border-radius: 5px;
     float: right;
@@ -632,7 +605,7 @@ p {
 .photo {
     width: 200px;
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 20px;
     margin-bottom: 40px;
     border: 1px solid #fff;
     background: #fff;
