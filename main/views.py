@@ -6,6 +6,8 @@ from django.views.generic import FormView
 from generic.mixins import LangListMixin
 from main.forms import ContactForm
 
+from django.utils.translation import get_language_from_request
+
 class MainPageView(TemplateView, LangListMixin):
     template_name = 'mainpage.html'
 
@@ -19,17 +21,11 @@ class ContactView(FormView, LangListMixin):
         return context
 
     def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
         form.send_email()
-        # print "form is valid"
         return super(ContactView, self).form_valid(form)
 
     def get_success_url(self):
         return reverse('main')
-
-class NewsView(TemplateView):
-    template_name = 'news.html'
 
 class GaleryView(TemplateView):
     template_name = 'photos.html'
