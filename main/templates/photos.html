@@ -1,28 +1,19 @@
 {% extends 'main.html' %}
 {% load staticfiles %}
 {% block main %}    
-<div id="news">    
+<div id="news">   
+    <button style="float: right; margin-top: 15px;"> Добавить </button> 
     <p class="title">Фотогалерея</p>
-    <div id="popup" onclick="Close(this)" >
+    <div id="popup">
         <div>
             <img src="" />
             <p> Описание картинки. Очень длинное, чтобы можно было увидеть, как себя поведут элементы, 
             если вот прямо сюда понаписать очень много букв. А потом в конец предложения дописать ещё 
             несколько букв. А потом написать целый рассказ о том, как ты писал много букв в описание 
             к картинке. Зачем? </p>
-            <i class="fa fa-close" aria-hidden="true"></i>
+            <i class="fa fa-close" aria-hidden="true" onclick="Close(this)" ></i>
         </div>
     </div>
-    <script>
-        function Open(div) {
-            var popup = document.getElementById('popup');
-            popup.setAttribute("style", "visibility: visible; opacity: 1;");
-            popup.children[0].children[0].src = div.children[1].src;
-        }       
-        function Close(div) {
-            div.setAttribute("style", "opacity: 0; visibility: hidden; transition: visibility 0.21s, opacity 0.2s linear;");
-        }
-    </script>
     <!-- PHOTO EXAMPLE BLOCK -->
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
@@ -54,6 +45,17 @@
             </p>
         </div>
     </div>
-    <!-- ENDBLOCK -->
+    <!-- ENDBLOCK -->    
+    <script>       
+        function Open(div) {
+            var popup = document.getElementById('popup');
+            popup.setAttribute("style", "visibility: visible; opacity: 1;");
+            popup.children[0].children[0].src = div.children[1].src;
+        }             
+        function Close(i) {
+            var target = i.parentElement.parentElement;
+            target.setAttribute("style", "opacity: 0; visibility: hidden; transition: visibility 0.21s, opacity 0.2s linear;");
+        }        
+    </script>
 </div>
 {% endblock %}
