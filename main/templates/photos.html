@@ -23,22 +23,27 @@
             div.setAttribute("style", "opacity: 0; visibility: hidden; transition: visibility 0.21s, opacity 0.2s linear;");
         }
     </script>
+
+
+    {% for item in items %}
     <!-- PHOTO EXAMPLE BLOCK -->
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
-        <img src="{% static 'images/slider/1.jpg' %}" />
+        <img src="{{ item.image.url }}" />
         <div>
             <p>
                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                23.07.2016
+                {{ item.pub_date.date }}
             </p>
             <p>
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                15:09
+                {{ item.pub_date.time}}
             </p>
         </div>
     </div>
     <!-- ENDBLOCK -->
+    {% endfor %}
+
     <!-- PHOTO EXAMPLE BLOCK -->
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>

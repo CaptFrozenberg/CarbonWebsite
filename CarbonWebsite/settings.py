@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'easy_thumbnails',
     'main',
     'news',
+    'galery',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -151,3 +153,6 @@ EMAIL_USE_SSL = True
 
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# thumbnails
+THUMBNAIL_BASEDIR = 'thumbnails'
