@@ -13,7 +13,8 @@
             <a href="{% url 'main' %}">
                 <img src="{% static 'images/logo.png' %}" />
             </a>
-            <ul>
+            <i class="fa fa-bars" aria-hidden="true" onclick="MenuOpened(this)"></i>
+            <ul style="">
                 <li>
                     <a href="{% url 'main' %}">{% trans 'О компании' %}</a>
                 </li>
@@ -93,4 +94,16 @@
 (c) 2016 CARBON-SERVICE All rights reserved.
 <a href="/admin/" style="display: block; float: right;">Войти</a>
 </div>
+
+<script>
+    function MenuOpened(i) {
+        var ul = i.parentElement.children[2];
+        var value = ul.getAttribute("style");
+        if (value.indexOf("block") > -1) {
+            ul.setAttribute("style", "display: none;");
+        } else {                
+            ul.setAttribute("style", "display: block;");
+        }
+    }
+</script>
 {% endblock %}
