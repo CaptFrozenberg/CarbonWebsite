@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'easy_thumbnails',
     'main',
     'news',
+    'galery',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -151,3 +153,15 @@ EMAIL_USE_SSL = True
 
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# thumbnail settings
+THUMBNAIL_DEFAULT_OPTIONS = {'crop':'smart'}
+THUMBNAIL_BASEDIR = 'thumbnails'
+THUMBNAIL_ALIASES = {
+    'galery' : {
+        'galery_thumb' : {'size': (200, 200)}
+    },
+    'news': {
+        'news_thumb': {'size': (150, 150)}
+    },
+}

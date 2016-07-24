@@ -3,7 +3,7 @@ from django.utils.translation import ugettext as _
 
 class GaleryItem(models.Model):
     name = models.CharField(max_length=40, verbose_name=_('Название'))
-    description = models.TextField(max_length=200, verbose_name=_('Описание'))
+    description = models.TextField(verbose_name=_('Описание'))
     pub_date = models.DateTimeField(auto_now_add=True, verbose_name=_('Дата публикации'))
     image = models.ImageField(verbose_name=_('Изображение'),
                               error_messages={'required': _('Укажите файл изображения'),

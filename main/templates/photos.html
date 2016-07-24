@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load thumbnail %}
 {% load staticfiles %}
 {% block main %}    
 <div id="news">   
@@ -14,22 +15,26 @@
             <i class="fa fa-close" aria-hidden="true" onclick="Close(this)" ></i>
         </div>
     </div>
+
+    {% for item in items %}
     <!-- PHOTO EXAMPLE BLOCK -->
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
-        <img src="{% static 'images/slider/1.jpg' %}" />
+        <img src="{{ item.image|thumbnail_url:'galery_thumb' }}" alt="{{ item.description }}"/>
         <div>
             <p>
                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                23.07.2016
+                {{ item.pub_date.date }}
             </p>
             <p>
                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                15:09
+                {{ item.pub_date.time }}
             </p>
         </div>
     </div>
     <!-- ENDBLOCK -->
+    {% endfor %}
+
     <!-- PHOTO EXAMPLE BLOCK -->
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
