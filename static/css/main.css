@@ -127,10 +127,10 @@ p {
 }
 
 #footer {
-    width: 1000px;
+    width: 960px;
     border-top: 1px solid #e1e1e1;
     color: #cecece;
-    padding: 20px;
+    padding: 20px 40px;
     margin: 0 auto;
     background: #fff;
 }
@@ -244,7 +244,7 @@ p {
     position: absolute;
     top: 0;  
     animation-name: anim_slides;
-    animation-duration: 24.0s;
+    animation-duration: 20.0s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: normal;
@@ -252,7 +252,7 @@ p {
     animation-play-state: running;
     animation-fill-mode: forwards;  
     -webkit-animation-name: anim_slides;
-    -webkit-animation-duration: 24.0s;
+    -webkit-animation-duration: 20.0s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: normal;
@@ -260,7 +260,7 @@ p {
     -webkit-animation-play-state: running;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-name: anim_slides;
-    -moz-animation-duration: 24.0s;
+    -moz-animation-duration: 20.0s;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: infinite;
     -moz-animation-direction: normal;
@@ -270,16 +270,16 @@ p {
 }
 
 #about > div.slider > ul > li:nth-child(2) {
-    -webkit-animation-delay: 6.0s;
-    -moz-animation-delay: 6.0s;
+    -webkit-animation-delay: 5.0s;
+    -moz-animation-delay: 5.0s;
 }
 #about > div.slider > ul > li:nth-child(3) {
-    -webkit-animation-delay: 12.0s;
-    -moz-animation-delay: 12.0s;
+    -webkit-animation-delay: 10.0s;
+    -moz-animation-delay: 10.0s;
 }
 #about > div.slider > ul > li:nth-child(4) {
-    -webkit-animation-delay: 18.0s;
-    -moz-animation-delay: 18.0s;
+    -webkit-animation-delay: 15.0s;
+    -moz-animation-delay: 15.0s;
 }
 
 #about > div.slider > ul > li > img {
@@ -423,15 +423,31 @@ p {
 #popup > div > p {
     color: #fff;
     text-align: center;
-    max-width: 500px;
     font-size: 13px;
 }
 
-#popup > div > i {
+#popup > div > i.fa-close {
     position: absolute;
     top: 0;
     right: -50px;
     vertical-align: top;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#popup > div > i.fa-angle-left {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+}
+#popup > div > i.fa-angle-right {
+    position: absolute;
+    top: 40%;
+    right: 10px;
     color: #fff;
     font-size: 50px;
     cursor: pointer;
