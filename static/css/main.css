@@ -444,6 +444,7 @@ p {
     font-size: 50px;
     cursor: pointer;
 }
+
 #popup > div > i.fa-angle-right {
     position: absolute;
     top: 40%;
@@ -451,6 +452,11 @@ p {
     color: #fff;
     font-size: 50px;
     cursor: pointer;
+}
+
+#newsfull {
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 /* DEFINITIONS FOR CLASSES */
@@ -468,7 +474,7 @@ p {
 }
 
 .article {
-    padding: 20px 0;
+    padding: 10px 0;
     border-top: 1px solid #dfdfdf;
 }
 
@@ -502,6 +508,24 @@ p {
 .article > div.articleinfo > div.content {
     display: block;
     line-height: 1.7em;
+}
+
+.article > div.articlefull > div.content {
+    display: inline-block;
+    text-align: justify;
+}
+
+.article > div.articlefull > img {
+    display: inline;
+    max-width: 500px;
+    max-height: 300px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    float: right;
+}
+
+.article > div.articlefull > div.content {
+    display: inline;
 }
 
 .contactform {
@@ -656,3 +680,4 @@ p {
 .spressed > form > input {
     margin-bottom: -5px;
 }
+
