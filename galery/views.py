@@ -19,6 +19,5 @@ class GaleryView(TemplateView):
         # objects_count = len(items)
         # context['rows'] = get_rows_count(objects_count)
         # context['items_in_row'] = range(4)
-        print(len(items))
         context['items'] = items
         return context

@@ -3,7 +3,9 @@
 {% load staticfiles %}
 {% block main %}    
 <div id="news">   
-    <button style="float: right; margin-top: 15px;"> Добавить </button> 
+    {% if request.user.is_staff %}
+        <button style="float: right; margin-top: 15px;"> Добавить </button>
+    {% endif %}
     <p class="title">Фотогалерея</p>
     <div id="popup">
         <div>
@@ -21,7 +23,7 @@
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
         <img src="{{ item.image|thumbnail_url:'galery_thumb' }}" alt="{{ item.description }}"/>
-        <div>
+        <div class="{{ item.image.url }}">
             <p>
                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
                 {{ item.pub_date.date }}
@@ -55,7 +57,7 @@
         function Open(div) {
             var popup = document.getElementById('popup');
             popup.setAttribute("style", "visibility: visible; opacity: 1;");
-            popup.children[0].children[0].src = div.children[1].src;
+            popup.children[0].children[0].src = div.children[2].className;
         }             
         function Close(i) {
             var target = i.parentElement.parentElement;
