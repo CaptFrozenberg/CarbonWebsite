@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load thumbnail %}
 {% load staticfiles %}
 {% block main %}    
 <div id="news">
@@ -7,7 +8,7 @@
     {% for news in news_list %}
     <!-- NEWS ITEM BLOCK -->
     <div class="article">
-        <img src="{{ news.image.url }}" />
+        <img src="{{ news.image|thumbnail_url:'news_thumb' }}" />
         <div class="articleinfo">
             <div class="newstitle">
                 {{ news.title }}
