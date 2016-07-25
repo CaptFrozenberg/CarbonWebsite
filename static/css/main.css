@@ -57,6 +57,7 @@ a {
 
 p {
     line-height: 1.7em;
+    text-align: left;
 }
 
 /* DEFINITIONS FOR IDS */
@@ -71,50 +72,6 @@ p {
     z-index: 10;
 }
 
-#menu {
-    margin: 0 auto;
-    display: block;
-    width: 1000px;
-}
-
-#menu > a > img {
-    width: 300px;
-    display: inline-block;
-}
-
-#menu > ul {
-    float: right;
-    padding: 0;
-    margin: 8px 0;
-    display: inline-block;
-}
-
-#menu > ul > li {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    list-style: none;
-    display: inline-block;
-    margin: 0 15px;
-    vertical-align: middle;
-    transition: text-shadow 0.2s ease-out;
-}
-
-#menu > ul > li:hover {
-    transition: text-shadow 0.2s ease-out;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
-    cursor: pointer;
-}
-
-#menu > ul > li:active {
-    cursor: pointer;
-}
-
-#menu > ul > li > img {
-    margin-top: -10px;
-    margin-bottom: -10px;
-}
-
 #content {
     margin-left: auto;
     margin-right: auto;
@@ -127,7 +84,7 @@ p {
 }
 
 #footer {
-    width: 960px;
+    max-width: 960px;
     border-top: 1px solid #e1e1e1;
     color: #cecece;
     padding: 20px 40px;
@@ -143,7 +100,7 @@ p {
     width: 300px;
     margin: 0 50px 0 0;
     display: inline-block;
-    position: relative;
+    position: absolute;
     height: 300px;
 }
 
@@ -296,12 +253,13 @@ p {
 
 #about > div + div {
     display: inline-block;
-    width: 550px;
+    margin-left: 350px;
     vertical-align: top;
 }
 
 #directions {
     margin-top: 20px;
+    text-align: center;
 }
 
 #directions > div {
@@ -328,7 +286,7 @@ p {
 }
 
 #directions > div > p.sectitle {
-    font-size: 26px!important; 
+    font-size: 26px; 
     color: #838383;
     margin-bottom: 0px;
 }
@@ -654,3 +612,170 @@ p {
     margin-bottom: -5px;
 }
 
+/* @MEDIA DEFINITIONS */
+
+@media only screen and (min-width:0px) and (max-width:650px) {
+    #footer {
+        padding: 20px!important;
+        font-size: 12px;
+    }
+    .title {
+        font-size: 18px!important;
+    }
+    #directions > div > p.sectitle {
+        font-size: 20px!important;
+    }
+    #content {
+        padding: 20px!important;
+    }
+    #directions > div {
+        width: 100%!important;
+    }
+    #menu {
+        margin: 0 auto;
+        display: block;
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+    #menu > a > img {
+        max-width: 240px;
+        display: inline-block;
+        vertical-align: center;
+        padding-top: 8px;
+    }
+    #menu > ul {
+        float: right;
+        padding: 0;
+        margin: 8px 0;
+        display: none;
+    }
+    #menu > .fa-bars {
+        color: #fff;
+        float: right;
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 8px;
+        vertical-align: top;
+    }
+    #about > div.slider {
+        margin: 0 auto!important;
+        display: block!important;
+        padding-bottom: 10px;
+    }
+        /*
+    #menu > ul > li {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+        transition: text-shadow 0.2s ease-out;
+    }
+    #menu > ul > li:hover {
+        transition: text-shadow 0.2s ease-out;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
+    #menu > ul > li:active {
+        cursor: pointer;
+    }
+    #menu > ul > li > img {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+    */
+    
+    
+    #about > div.slider {
+        position: relative!important;
+    }
+    #about > div + div {
+        margin-left: 0!important;
+    }
+    #directions > div {
+        margin: 0!important;
+    }
+}
+
+@media only screen and (min-width:650px) and (max-width:900px) {
+    #menu {
+        margin: 0 auto;
+        display: block;
+        max-width: 1000px;
+        padding: 0 30px;
+    }
+    #menu > a > img {
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: center;
+    }
+    #menu > ul {
+        float: right;
+        padding: 0;
+        margin: 8px 0;
+        display: none;
+    }
+    #menu > .fa-bars {
+        color: #fff;
+        float: right;
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 8px;
+        vertical-align: top;
+    }
+    #about > div.slider {
+        margin: 0 auto!important;
+        display: block!important;
+        padding-bottom: 10px;
+    }
+    #abouttext > h1 {
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    #menu {
+        margin: 0 auto;
+        display: block;
+        max-width: 1000px;
+        padding: 0 10px;
+    }
+    #menu > a > img {
+        max-width: 300px;
+        display: inline-block;
+    }
+    #menu > ul {
+        float: right;
+        padding: 0;
+        margin: 8px 0;
+        display: inline-block;
+    }
+    #menu > ul > li {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+        transition: text-shadow 0.2s ease-out;
+    }
+    #menu > ul > li:hover {
+        transition: text-shadow 0.2s ease-out;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
+    #menu > ul > li:active {
+        cursor: pointer;
+    }
+    #menu > ul > li > img {
+        margin-top: -10px;
+        margin-bottom: -10px;
+    }
+    #menu > .fa-bars {
+        display: none;
+    }
+}
