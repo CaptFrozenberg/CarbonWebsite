@@ -14,7 +14,7 @@
                 <img src="{% static 'images/logo.png' %}" />
             </a>
             <i class="fa fa-bars" aria-hidden="true" onclick="MenuOpened(this)"></i>
-            <ul style="">
+            <ul style=" ">
                 <li>
                     <a href="{% url 'main' %}">{% trans 'О компании' %}</a>
                 </li>
@@ -99,7 +99,7 @@
     function MenuOpened(i) {
         var ul = i.parentElement.children[2];
         var value = ul.getAttribute("style");
-        if (value.indexOf("block") > -1) {
+        if (value.indexOf("block") != -1) {
             ul.setAttribute("style", "display: none;");
         } else {                
             ul.setAttribute("style", "display: block;");
