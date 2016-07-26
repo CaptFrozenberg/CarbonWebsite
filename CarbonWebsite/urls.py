@@ -25,7 +25,7 @@ urlpatterns = solid_i18n_patterns(
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', admin.site.urls),
     url(r'^login/', login, name= 'login'),
-    url(r'^logout/', logout, name = 'logout'),
+    url(r'^logout/', logout, name= 'logout'),
     url(r'^', include('main.urls')),
     url(r'^', include('news.urls')),
     url(r'^', include('galery.urls')),
