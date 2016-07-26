@@ -9,20 +9,21 @@
     <p class="title">Новости</p>
     {% for news in news_list %}
     <a href="{% url 'news_detail' news_id=news.id %}">
-    <div class="article">
-        <img src="{{ news.image|thumbnail_url:'news_thumb' }}" />
-        <div class="articleinfo">
-            <div class="newstitle">
-                {{ news.title }}
-            </div>
-            <div class="content">
-                {{ news.short_content }}
-            </div>
-            <div class="datetime">
-                {{ news.pub_date }}
+        <div class="article">
+            <img src="{{ news.image|thumbnail_url:'news_thumb' }}" />
+            <div class="articleinfo">
+                <div class="newstitle">
+                    {{ news.title }}
+                </div>
+                <div class="content">
+                    {{ news.short_content }}
+                </div>
+                <div class="datetime">
+                    {{ news.pub_date }}
+                </div>
             </div>
         </div>
-    </div>
+    </a>
     {% endfor %}
     <div class="article"></div>
 </div>

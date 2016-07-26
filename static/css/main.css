@@ -140,7 +140,7 @@ p {
     display: inline-block;
     vertical-align: top;
 }
-#directions > div > div.ellipse {
+.ellipse {
     width: 200px;
     height: 200px;
     border-radius: 100px;
@@ -150,7 +150,7 @@ p {
     font-size: 70px;
     margin: 0 auto;
 }
-#directions > div > div.ellipse > i {
+.ellipse > i {
     margin-top: 60px;
 }
 #directions > div > p.sectitle {
@@ -240,10 +240,6 @@ p {
     color: #fff;
     font-size: 50px;
     cursor: pointer;
-}
-#newsfull {
-    margin-right: 20px;
-    margin-left: 20px;
 }
 
 /* DEFINITIONS FOR CLASSES */
@@ -447,7 +443,6 @@ p {
     margin: 10% auto;
     border-radius: 5px;
 }
-
 .loginform > h2 {
     text-transform: uppercase;
     background: #5369bd;
@@ -458,12 +453,10 @@ p {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-
 .loginform > p + p > a {
     display: inline-block;
     margin: 5px 5px;
 }
-
 .loginform > p.text {
     font-size: 14px;
     border-top: 1px solid #d7d8d0;
@@ -472,7 +465,6 @@ p {
     padding: 15px;
     margin: 25px auto;
 }
-
 .loginform > form > div > input {
     font-family: "Open Sans", Arial, sans-serif !important;
     text-transform: uppercase;
@@ -489,28 +481,23 @@ p {
     transition: background 0.2s ease-out;
     width: 220px;
 }
-
 .loginform > form > div > input:hover {
     transition: background 0.2s ease-out;
     background: #8195e1;
     cursor: pointer;
 }
-
 .loginform > form > div > input:active {
     background: #6175c1;
     cursor: pointer;
 }
-
-.loginform > form > div.form-field {
+.form-field {
     width: 220px;
     margin: auto;
 }
-
-.loginform > form > div.form-field > div.control {
+.form-field > div.control {
     width: 220px;
 }
-
-.loginform > form > div.form-field > div.control > input {
+.form-field > div.control > input {
     width: 200px!important;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -519,18 +506,20 @@ p {
     background: #eaeaea;
     transition: background 0.2s ease-out;
 }
-
-.loginform > form > div.form-field > div.control > input:focus {
+.form-field > div.control > input:focus {
     background: #f9f9f9;
     border: 1px solid #eaeaea;
     transition: background 0.2s ease-out;
 }
-
-.loginform > form > div.form-field > div.label {
+.form-field > div.label {
     font-size: 13px;
     text-align: left;
     color: #848484;
     padding-bottom: 5px;
+}
+#about > a > div.ellipse {
+    float: left;
+    margin-right: 30px;
 }
 
 /* @MEDIA DEFINITIONS */
@@ -581,6 +570,10 @@ p {
     }
 }
 @media only screen and (min-width:0px) and (max-width:650px) {
+    .article > div.articlefull > img {
+        max-width: 100%!important;
+        max-height: 100%!important;
+    }
     #submit {
         width: 100%;
     }
