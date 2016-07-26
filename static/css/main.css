@@ -209,6 +209,7 @@ p {
     max-height: 400px;
     margin: auto;
     display: block;
+    width: 100%;
 }
 #popup > div > p {
     color: #000;
@@ -306,6 +307,7 @@ p {
 }
 .contactform {
     width: 100%;
+    max-width: 600px;
     height: 400px;
     display: inline-block;
     vertical-align: top;
@@ -315,7 +317,8 @@ p {
     margin-bottom: 20px;
     border: 1px solid #f2f2f2;
     border-radius: 4px;
-    padding: 20px;
+    padding: 20px 15px;    
+    box-sizing: border-box;
     font-size: 14px;
     font-family: inherit;
     transition: background 0.2s ease-out;
@@ -329,23 +332,24 @@ p {
     border: 1px solid #f2f2f2;
     margin-bottom: 20px;
     border-radius: 4px;
-    padding: 20px;
-    width: 560px;
+    padding: 20px 15px; 
+    width: 100%;
     height: 100px;
     font-family: inherit;
     font-size: 14px;
     resize: none;
     transition: background 0.2s ease-out;
+    box-sizing: border-box;
 }
 .contactform > form > textarea:focus {
     transition: background 0.2s ease-out;
     background: #fafafa;
 }
 .contactform > form > input#name {
-    width: 30%;
+    width: 45%;
 }
 .contactform > form > input#e-mail {
-    width: 40%;
+    width: 45%;
     float: right;
 }
 .contactform > form > input#title {
@@ -361,7 +365,7 @@ p {
     background: #5369bd;
     color: #fff;
     display: inline-block;
-    width: 280px;
+    max-width: 280px;
     height: 320px;
     vertical-align: top;
     margin-top: 78px;
@@ -483,6 +487,9 @@ p {
     }
 }
 @media only screen and (min-width:0px) and (max-width:650px) {
+    #submit {
+        width: 100%;
+    }
     #header {
         padding: 10px 0!important;
     }
