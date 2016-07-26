@@ -2,11 +2,11 @@
 {% load thumbnail %}
 {% load staticfiles %}
 {% block main %}    
-<div id="news">   
+<div id="photos">   
     {% if request.user.is_staff %}
-        <button style="float: right; margin-top: 15px;"> Добавить </button>
+        <button style="float: right; margin-top: 12px;"> Добавить </button>
     {% endif %}
-    <p class="title">Фотогалерея</p>
+    <p class="title">Галерея</p>
     <div id="popup">
         <div>
             <img src="" />
@@ -17,9 +17,7 @@
             <i class="fa fa-close" aria-hidden="true" onclick="Close(this)" ></i>
         </div>
     </div>
-
     {% for item in items %}
-    <!-- PHOTO EXAMPLE BLOCK -->
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
         <img src="{{ item.image|thumbnail_url:'galery_thumb' }}" alt="{{ item.description }}"/>
@@ -34,30 +32,13 @@
             </p>
         </div>
     </div>
-    <!-- ENDBLOCK -->
-    {% endfor %}
-
-    <!-- PHOTO EXAMPLE BLOCK -->
-    <div class="photo" onclick="Open(this)" >
-        <i class="fa fa-picture-o" aria-hidden="true"></i>
-        <img src="{% static 'images/slider/2.jpg' %}" />
-        <div>
-            <p>
-                <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                23.07.2016
-            </p>
-            <p>
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                15:09
-            </p>
-        </div>
-    </div>
-    <!-- ENDBLOCK -->    
+    {% endfor %}  
     <script>       
         function Open(div) {
             var popup = document.getElementById('popup');
             popup.setAttribute("style", "visibility: visible; opacity: 1;");
             popup.children[0].children[0].src = div.children[2].className;
+            popup.children[0].children[1].innerHTML = div.children[1].alt;
         }             
         function Close(i) {
             var target = i.parentElement.parentElement;

@@ -13,7 +13,9 @@
             <a href="{% url 'main' %}">
                 <img src="{% static 'images/logo.png' %}" />
             </a>
-            <i class="fa fa-bars" aria-hidden="true" onclick="MenuOpened(this)"></i>
+            <a>
+                <i class="fa fa-bars" aria-hidden="true" onclick="MenuOpened(this)"></i>
+            </a>
             <ul style=" ">
                 <li>
                     <a href="{% url 'main' %}">{% trans 'О компании' %}</a>
@@ -36,32 +38,7 @@
                         <input name="language" type="hidden" value="ru" />
                         <input class="limg" type="image" src="{% static 'images/Russia-Round.png' %}" alt="Submit" height="30">
                     </form>
-                </li>
-                <li class="spressed">
-                    <form action="/i18n/setlang/" method="POST">
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="/" />
-                        <input name="language" type="hidden" value="de" />
-                        <input class="limg" type="image" src="{% static 'images/Germany-Round.png' %}" alt="Submit" height="30">
-                    </form>
-                </li>
-                {% elif LANGUAGE_CODE == 'de' %}
-                <li class="spressed">
-                    <form action="/i18n/setlang/" method="POST">
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="/" />
-                        <input name="language" type="hidden" value="ru" />
-                        <input class="limg" type="image" src="{% static 'images/Russia-Round.png' %}" alt="Submit" height="30">
-                    </form>
-                </li>
-                <li class="spressed">
-                    <form action="/i18n/setlang/" method="POST">
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="/" />
-                        <input name="language" type="hidden" value="en" />
-                        <input class="limg" type="image" src="{% static 'images/United-Kingdom-Round.png' %}" alt="Submit" height="30">
-                    </form>
-                </li>                
+                </li>            
                 {% else %}
                 <li class="spressed">
                     <form action="/i18n/setlang/" method="POST">
@@ -69,14 +46,6 @@
                         <input name="next" type="hidden" value="/" />
                         <input name="language" type="hidden" value="en" />
                         <input class="limg" type="image" src="{% static 'images/United-Kingdom-Round.png' %}" alt="Submit" height="30">
-                    </form>
-                </li>
-                <li class="spressed">
-                    <form action="/i18n/setlang/" method="POST">
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="/" />
-                        <input name="language" type="hidden" value="de" />
-                        <input class="limg" type="image" src="{% static 'images/Germany-Round.png' %}" alt="Submit" height="30">
                     </form>
                 </li>
                 {% endif %}
@@ -97,12 +66,12 @@
 
 <script>
     function MenuOpened(i) {
-        var ul = i.parentElement.children[2];
+        var ul = i.parentElement.parentElement.children[2];
         var value = ul.getAttribute("style");
-        if (value.indexOf("block") != -1) {
-            ul.setAttribute("style", "display: none;");
+        if (value.indexOf("visible") != -1) {
+            ul.setAttribute("style", "visibility: hidden; opacity: 0; transition: visibility 0.21s, opacity 0.2s linear;");
         } else {                
-            ul.setAttribute("style", "display: block;");
+            ul.setAttribute("style", "visibility: visible; opacity: 1; transition: visibility 0.21s, opacity 0.2s linear;");
         }
     }
 </script>

@@ -4,8 +4,10 @@ html {
     min-height: 100%;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
+    min-width: 320px;
 }
 body {
+    min-width: 320px;
     width: 100%;
     padding: 0;
     margin: 0;   
@@ -56,6 +58,7 @@ p {
 /* DEFINITIONS FOR IDS */
 #header {
     padding: 20px 0;
+    min-width: 320px;
     width: 100%;
     height: 50px;
     margin: 0;
@@ -168,13 +171,13 @@ p {
 #partners > p.title {
     margin-bottom: 0px;
 }
+#photos,
 #news {
     display: inline-block;
     vertical-align: top;
     width: 100%;
 }
 #contacts {
-    margin-left: 20px;
     display: inline-block;
     height: 450px;
 }
@@ -211,7 +214,6 @@ p {
     color: #000;
     text-align: center;
     font-size: 13px;
-    max-width: 450px;
 }
 #popup > div > i.fa-close {
     position: absolute;
@@ -266,6 +268,8 @@ p {
     display: inline-block;
     width: 150px;
     border-radius: 75px;
+    margin: 5px 0;
+    margin-bottom: 10px;
 }
 .article > div.articleinfo {
     display: inline-block;
@@ -301,7 +305,7 @@ p {
     display: inline;
 }
 .contactform {
-    width: 600px;
+    width: 100%;
     height: 400px;
     display: inline-block;
     vertical-align: top;
@@ -338,14 +342,14 @@ p {
     background: #fafafa;
 }
 .contactform > form > input#name {
-    width: 250px;
+    width: 30%;
 }
 .contactform > form > input#e-mail {
-    width: 250px;
+    width: 40%;
     float: right;
 }
 .contactform > form > input#title {
-    width: 560px;
+    width: 100%;
 }
 .contactform > form > p {
     display: inline-block;
@@ -433,6 +437,46 @@ p {
 
 /* @MEDIA DEFINITIONS */
 @media only screen and (min-width:0px) and (max-width:650px) {
+    .article > div.articleinfo {
+        width: 100%;
+        padding: 0;
+    }
+    #photos {
+        text-align: center;
+    }
+    .spressed {
+        padding-bottom: 10px!important;
+        display: block!important;
+    }
+    .photo {
+        margin: 20px;
+    }
+    .contacttext {
+        width: auto;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    #contacts {
+        width: 100%;
+        height: auto;
+    }
+    ymaps {
+        display: none!important;
+        width: 0!important;
+        height: 0!important;
+    }
+    #about > div.slider > ul > li > img,
+    #about > div.slider {
+        width: 270px!important;
+        height: 270px!important;
+    }
+    #about > div.slider > ul > li > p {
+        width: 250px!important;
+    }
+    #about > div.slider > ul > li > p {
+        top: 190px!important;
+        height: 60px!important;
+    }
     #footer {
         padding: 20px!important;
         font-size: 12px;
@@ -459,22 +503,38 @@ p {
         max-width: 240px;
         display: inline-block;
         vertical-align: center;
-        padding-top: 8px;
+        padding-top: 6px;
     }
     #menu > ul {
-        float: right;
+        margin: 10px -20px 25px -20px;
         padding: 0;
-        margin: 8px 0;
-        display: none;
+        display: block;
+        visibility: hidden;
         list-style: none;
+        background: #5369bd;
+        opacity: 0;
+        text-align: center;
     }
-    #menu > .fa-bars {
+    #menu > ul > li {
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        display: inline-block;
+    }
+    #menu > a > i.fa-bars {
         color: #fff;
         float: right;
         font-size: 30px;
         margin-left: 10px;
         margin-top: 8px;
         vertical-align: top;
+    }
+    #menu > a {
+        cursor: pointer;
     }
     #about > div.slider {
         margin: 0 auto!important;
@@ -510,7 +570,7 @@ p {
         display: none;
         list-style: none;
     }
-    #menu > .fa-bars {
+    #menu > a > i.fa-bars {
         color: #fff;
         float: right;
         font-size: 30px;
@@ -568,8 +628,9 @@ p {
         margin-top: -10px;
         margin-bottom: -10px;
     }
-    #menu > .fa-bars {
+    #menu > a > .fa-bars {
         display: none;
+        cursor: pointer!important;
     }
 }
 /* ENDBLOCK */

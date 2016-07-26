@@ -4,7 +4,7 @@
 {% block main %}    
 <div id="news">
     {% if request.user.is_staff %}
-        <button style="float: right; margin-top: 15px;"> Добавить </button>
+        <button style="float: right; margin-top: 12px;"> Добавить </button>
     {% endif %}    
     <p class="title">Новости</p>
     {% for news in news_list %}
