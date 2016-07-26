@@ -438,6 +438,100 @@ p {
 .spressed > form > input {
     margin-bottom: -5px;
 }
+.loginform {
+    width: 300px;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    background: #fff;
+    margin: 10% auto;
+    border-radius: 5px;
+}
+
+.loginform > h2 {
+    text-transform: uppercase;
+    background: #5369bd;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.loginform > p + p > a {
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+.loginform > p.text {
+    font-size: 14px;
+    border-top: 1px solid #d7d8d0;
+    border-bottom: 1px solid #d7d8d0;
+    width: 200px;
+    padding: 15px;
+    margin: 25px auto;
+}
+
+.loginform > form > div > input {
+    font-family: "Open Sans", Arial, sans-serif !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #fff;
+    background: #5369bd;
+    border: none;
+    border-bottom: 4px solid #6f84d4;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 10px 0px;
+    transition: background 0.2s ease-out;
+    width: 220px;
+}
+
+.loginform > form > div > input:hover {
+    transition: background 0.2s ease-out;
+    background: #8195e1;
+    cursor: pointer;
+}
+
+.loginform > form > div > input:active {
+    background: #6175c1;
+    cursor: pointer;
+}
+
+.loginform > form > div.form-field {
+    width: 220px;
+    margin: auto;
+}
+
+.loginform > form > div.form-field > div.control {
+    width: 220px;
+}
+
+.loginform > form > div.form-field > div.control > input {
+    width: 200px!important;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+    padding: 12px 10px;
+    background: #eaeaea;
+    transition: background 0.2s ease-out;
+}
+
+.loginform > form > div.form-field > div.control > input:focus {
+    background: #f9f9f9;
+    border: 1px solid #eaeaea;
+    transition: background 0.2s ease-out;
+}
+
+.loginform > form > div.form-field > div.label {
+    font-size: 13px;
+    text-align: left;
+    color: #848484;
+    padding-bottom: 5px;
+}
 
 /* @MEDIA DEFINITIONS */
 @media only screen and (min-width:0px) and (max-width:850px) {
@@ -622,7 +716,6 @@ p {
     }
 }
 /* ENDBLOCK */
-
 
 /* SLIDER PART */
 @-webkit-keyframes anim_slides {
