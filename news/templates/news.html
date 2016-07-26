@@ -8,7 +8,6 @@
     {% endif %}    
     <p class="title">Новости</p>
     {% for news in news_list %}
-    <!-- NEWS ITEM BLOCK -->
     <div class="article">
         <img src="{{ news.image|thumbnail_url:'news_thumb' }}" />
         <div class="articleinfo">
@@ -23,49 +22,7 @@
             </div>
         </div>
     </div>
-    <!-- ENDBLOCK -->
     {% endfor %}
-
-    <!-- NEWS ITEM BLOCK -->
-    <div class="article">
-        <img src="{% static 'images/slider/1.jpg' %}" />
-        <div class="articleinfo">
-            <div class="newstitle">
-                BRAU Beviale 2010
-            </div>
-            <div class="content">
-                Выставка Brau Beviale 2010 на три дня объединяет на своих выставочных
-                площадках продавцов, покупателей, дистрибьюторов, производителей готовых 
-                напитков, сырья, тары, оборудования и упаковки для них, а также компании,
-                которые предлагают новые технологии и дополнительные услуги в этой области. 
-            </div>
-            <div class="datetime">
-                21.07.2016 23:21
-            </div>
-        </div>
-    </div>
-    <!-- ENDBLOCK -->
-    
-    <!-- NEWS ITEM BLOCK -->
-    <div class="article">
-        <img src="{% static 'images/slider/2.jpg' %}" />
-        <div class="articleinfo">
-            <div class="newstitle">
-                Meetup
-            </div>
-            <div class="content">
-                Свыше 1500 компаний представят свои стенды на суд профессионалов индустрии пива, 
-                а также других алкогольных и безалкогольных напитков. Каждый год в ноябре в Нюрнберге 
-                ежегодно собираются до 40 000 посетителей. Приглашаем Вас посетить наш стенд 615 в 
-                зале 7/7.            
-            </div>
-            <div class="datetime">
-                21.07.2016 13:34
-            </div>
-        </div>
-    </div>
-    <!-- ENDBLOCK -->
-    
     <div class="article"></div>
 </div>
 {% endblock %}
