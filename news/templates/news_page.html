@@ -3,9 +3,9 @@
 {% block main %}    
 <div id="newsfull">
     <p class="title">
-        BRAU Beviale 2010
+        {{ news.title }}
         <div class="datetime" style="display: inline;">
-            Опубликовано: 21.07.2007 23:21
+            Опубликовано: {{ news.pub_date }}
         </div>
     </p>
     <!-- NEWS ITEM BLOCK -->
@@ -13,7 +13,8 @@
         <div class="articlefull">
             <img src="{% static 'images/slider/1.jpg' %}" />
             <div class="content">
-                <p>
+                {{ news.content }}
+                <!-- <p>
                 <b>Время проведения: 10.11.2010 - 12.11.2010</b><br />
                 <i>Место проведения: Германия » Нюрнберг</i>
                 </p>
@@ -44,7 +45,7 @@
                 </p>
                 <p>
                 Приглашаем Вас посетить наш стенд 615 в зале 7/7.
-                </p>
+                </p> -->
              </div>
         </div>
     </div>

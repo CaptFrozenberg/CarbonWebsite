@@ -3,6 +3,7 @@ from django.conf import settings
 from django.utils.translation import ugettext as _
 
 class News(models.Model):
+    #news_id = models.AutoField()
     title = models.CharField(max_length=30, unique=True, verbose_name=_('Заголовок'))
     pub_date = models.DateField(verbose_name=_('Дата публикации'))
     short_content = models.TextField(max_length=200, verbose_name=_('Краткое содержание'))

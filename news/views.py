@@ -11,3 +11,13 @@ class NewsView(TemplateView):
         context = super(NewsView, self).get_context_data(**kwargs)
         context['news_list'] = News.objects.filter(language=lang_code)
         return context
+
+class NewsDetailView(TemplateView):
+    template_name = 'news_page.html'
+
+    def get_context_data(self, **kwargs):
+        news_id = self.kwargs['news_id']
+        news = News.objects.get(id=news_id)
+        context = super(NewsDetailView, self).get_context_data(**kwargs)
+        context['news'] = news
+        return context

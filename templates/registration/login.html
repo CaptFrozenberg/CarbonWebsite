@@ -1,0 +1,20 @@
+{% extends "login_logout.html" %}
+{% load staticfiles %}
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fa-min.css' %}" />
+{% endblock %}
+{% block ll %}
+<div class="loginform">
+    <h2>
+        Вход
+    </h2>
+    <form action="" method="post">
+        {% include "generic/form.html" %}
+        <div class="submit-button">
+            <input type="submit" value="Войти">
+        </div>
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+</div>
+{% endblock %}

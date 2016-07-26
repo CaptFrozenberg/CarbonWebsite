@@ -8,6 +8,7 @@
     {% endif %}    
     <p class="title">Новости</p>
     {% for news in news_list %}
+    <a href="{% url 'news_detail' news_id=news.id %}">
     <div class="article">
         <img src="{{ news.image|thumbnail_url:'news_thumb' }}" />
         <div class="articleinfo">
