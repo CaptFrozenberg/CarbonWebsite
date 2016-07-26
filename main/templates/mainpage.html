@@ -31,7 +31,6 @@
             </li>
         </ul>
     </div>
-    <!--<img src="images/worker.png" />-->
     <div id="abouttext">
         <h1 class="title">{% trans 'О компании' %} </h1>
         <p>
@@ -63,9 +62,11 @@
     {% endblocktrans %}
     </p>
     <div>
-        <div class="ellipse">
-            <i class="fa fa-cutlery" aria-hidden="true"></i>
-        </div>
+        <a href="#">
+            <div class="ellipse">
+                <i class="fa fa-cutlery" aria-hidden="true"></i>
+            </div>
+        </a>
         <p class="sectitle">
             {% trans 'Пищевая отрасль' %}
         </p>
@@ -77,9 +78,11 @@
         </p>
     </div>
     <div>
-        <div class="ellipse">
-            <i class="fa fa-medkit" aria-hidden="true"></i>
-        </div>
+        <a href="#">
+            <div class="ellipse">
+                <i class="fa fa-medkit" aria-hidden="true"></i>
+            </div>
+        </a>
         <p class="sectitle">
              {% trans 'Фармацевтика' %}
         </p>
@@ -90,10 +93,12 @@
         {% endblocktrans %} 
         </p>
     </div>
-    <div>
-        <div class="ellipse">
-            <i class="fa fa-user" aria-hidden="true"></i>
-        </div>
+    <div>        
+        <a href="#">
+            <div class="ellipse">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+        </a>
         <p class="sectitle">
             {% trans 'Косметика' %}
         </p>
@@ -106,9 +111,11 @@
         </p>
     </div>
     <div>
-        <div class="ellipse">
-            <i class="fa fa-car" aria-hidden="true"></i>
-        </div>
+        <a href="#">
+            <div class="ellipse">
+                <i class="fa fa-car" aria-hidden="true"></i>
+            </div>
+        </a>
         <p class="sectitle">
             {% trans 'Автопром' %}
         </p>
@@ -119,9 +126,11 @@
         </p>
     </div>
     <div>
-        <div class="ellipse">
-            <i class="fa fa-flask" aria-hidden="true"></i>
-        </div>
+        <a href="#">
+            <div class="ellipse">
+                <i class="fa fa-flask" aria-hidden="true"></i>
+            </div>
+        </a>
         <p class="sectitle">
             {% trans 'Химия' %}
         </p>
@@ -132,29 +141,31 @@
         </p>
     </div>
     <div>
-        <div class="ellipse">
-            <img style="color: white; margin-top: 60px;" width="80" src="data:image/svg+xml;utf8;base64,
-            PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NT
-            ktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gL
-            iBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAv
-            c3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2F
-            wYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM4LjQ4NCAzOC40ODQiIHN0eWxlPSJlbmFibGUtYmFja2
-            dyb3VuZDpuZXcgMCAwIDM4LjQ4NCAzOC40ODQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhla
-            WdodD0iNTEycHgiPgo8Zz4KCTxnIGlkPSJiMTk2X21pbGsiPgoJCTxwYXRoIGQ9Ik0xOC4zOTIsMy4xNDVjMC40MjEt
-            MC4yNjYsMC43MS0wLjgzMiwwLjcxLTEuNDkyQzE5LjEwMiwwLjc0LDE4LjU0NywwLDE3Ljg2NCwwSDkuMDQ5QzguMzY
-            2LDAsNy44MTMsMC43NCw3LjgxMywxLjY1MiAgICBjMCwwLjY2LDAuMjg4LDEuMjI3LDAuNzA5LDEuNDkyYy0xLjg5LD
-            IuNTc0LTMuNzk5LDYuNzY0LTMuODk0LDYuOTcxbC0wLjExNSwwLjI1OHYwLjI3OXYyMy40MjJjMCwyLjQzLDEuOTc4L
-            DQuNDEsNC40MDUsNC40MSAgICBoOS4wNzZjMi40MzEsMCw0LjQwOS0xLjk4LDQuNDA5LTQuNDFWMTAuNjUydi0wLjI4
-            MWwtMC4xMTgtMC4yNTZDMjIuMTkxLDkuOTA4LDIwLjI4MSw1LjcxOSwxOC4zOTIsMy4xNDV6IE0xMy4zMjYsMTAuNjU
-            yICAgIGMtMy4xMTEsMi4zMzQtNy41MTcsMC03LjUxNywwczIuMjg5LTUuMDUxLDQuMjI5LTcuMzQ2aDYuODM2YzEuOT
-            M4LDIuMjk1LDQuMjI5LDcuMzQ2LDQuMjI5LDcuMzQ2UzE2LjQzNSw4LjMyLDEzLjMyNiwxMC42NTJ6IiBmaWxsPSIjR
-            kZGRkZGIi8+CgkJPHBhdGggZD0iTTIyLjkzNCwyMy42NmwxLjA5NSwxNC40MzZoOC44NDlsMS4wOTQtMTQuNDM2SDIy
-            LjkzNHogTTI4LjUzNywyNy43MzhjLTEuMjk2LDAuODc5LTQuNTE2LTAuMDItNC41MTYtMC4wMmwtMC4yNTEtMy4yNzk
-            gICAgaDkuMzZsLTAuMjQ5LDMuMzE2QzMyLjg4MiwyNy43NTYsMjkuODMzLDI2Ljg1NywyOC41MzcsMjcuNzM4eiIgZm
-            lsbD0iI0ZGRkZGRiIvPgoJPC9nPgoJPGcgaWQ9IkNhcGFfMV8xNzlfIj4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KP
-            C9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8
-            Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+        <a href="#">
+            <div class="ellipse">
+                <img style="color: white; margin-top: 60px;" width="80" src="data:image/svg+xml;utf8;base64,
+                PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NT
+                ktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gL
+                iBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAv
+                c3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2F
+                wYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM4LjQ4NCAzOC40ODQiIHN0eWxlPSJlbmFibGUtYmFja2
+                dyb3VuZDpuZXcgMCAwIDM4LjQ4NCAzOC40ODQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhla
+                WdodD0iNTEycHgiPgo8Zz4KCTxnIGlkPSJiMTk2X21pbGsiPgoJCTxwYXRoIGQ9Ik0xOC4zOTIsMy4xNDVjMC40MjEt
+                MC4yNjYsMC43MS0wLjgzMiwwLjcxLTEuNDkyQzE5LjEwMiwwLjc0LDE4LjU0NywwLDE3Ljg2NCwwSDkuMDQ5QzguMzY
+                2LDAsNy44MTMsMC43NCw3LjgxMywxLjY1MiAgICBjMCwwLjY2LDAuMjg4LDEuMjI3LDAuNzA5LDEuNDkyYy0xLjg5LD
+                IuNTc0LTMuNzk5LDYuNzY0LTMuODk0LDYuOTcxbC0wLjExNSwwLjI1OHYwLjI3OXYyMy40MjJjMCwyLjQzLDEuOTc4L
+                DQuNDEsNC40MDUsNC40MSAgICBoOS4wNzZjMi40MzEsMCw0LjQwOS0xLjk4LDQuNDA5LTQuNDFWMTAuNjUydi0wLjI4
+                MWwtMC4xMTgtMC4yNTZDMjIuMTkxLDkuOTA4LDIwLjI4MSw1LjcxOSwxOC4zOTIsMy4xNDV6IE0xMy4zMjYsMTAuNjU
+                yICAgIGMtMy4xMTEsMi4zMzQtNy41MTcsMC03LjUxNywwczIuMjg5LTUuMDUxLDQuMjI5LTcuMzQ2aDYuODM2YzEuOT
+                M4LDIuMjk1LDQuMjI5LDcuMzQ2LDQuMjI5LDcuMzQ2UzE2LjQzNSw4LjMyLDEzLjMyNiwxMC42NTJ6IiBmaWxsPSIjR
+                kZGRkZGIi8+CgkJPHBhdGggZD0iTTIyLjkzNCwyMy42NmwxLjA5NSwxNC40MzZoOC44NDlsMS4wOTQtMTQuNDM2SDIy
+                LjkzNHogTTI4LjUzNywyNy43MzhjLTEuMjk2LDAuODc5LTQuNTE2LTAuMDItNC41MTYtMC4wMmwtMC4yNTEtMy4yNzk
+                gICAgaDkuMzZsLTAuMjQ5LDMuMzE2QzMyLjg4MiwyNy43NTYsMjkuODMzLDI2Ljg1NywyOC41MzcsMjcuNzM4eiIgZm
+                lsbD0iI0ZGRkZGRiIvPgoJPC9nPgoJPGcgaWQ9IkNhcGFfMV8xNzlfIj4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KP
+                C9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8
+                Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
             </div>
+        </a>
         <p class="sectitle">
             {% trans 'Молочные продукты' %}
         </p>

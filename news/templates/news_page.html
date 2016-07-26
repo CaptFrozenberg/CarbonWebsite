@@ -8,15 +8,13 @@
             Опубликовано: {{ news.pub_date }}
         </div>
     </p>
-    <!-- NEWS ITEM BLOCK -->
     <div class="article">
         <div class="articlefull">
             <img src="{% static 'images/slider/1.jpg' %}" />
-            <div class="content">
+            <p class="content">
                 {{ news.content.rendered|safe }}
-            </div>
+            </p>
         </div>
     </div>
-    <!-- ENDBLOCK -->
 </div>
 {% endblock %}
