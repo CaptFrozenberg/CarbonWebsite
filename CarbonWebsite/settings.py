@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'easy_thumbnails',
+    'precise_bbcode',
     'main',
     'news',
     'galery',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -126,8 +128,6 @@ ugettext = lambda s: s
 LANGUAGES = (
     ('ru', get_language_info('ru')['name_local']),
     ('en', get_language_info('en')['name_local']),
-    ('de', get_language_info('de')['name_local']),
-
 )
 
 LOCALE_PATHS = (
@@ -165,3 +165,6 @@ THUMBNAIL_ALIASES = {
         'news_thumb': {'size': (150, 150)}
     },
 }
+
+# bbcode settings
+BBCODE_ALLOW_SMILES = False
