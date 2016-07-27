@@ -5,11 +5,18 @@ from django.views.generic.base import TemplateView
 from django.views.generic import FormView
 from generic.mixins import LangListMixin
 from main.forms import ContactForm
+from showcase.models import Industry
 
 from django.utils.translation import get_language_from_request
 
 class MainPageView(TemplateView, LangListMixin):
     template_name = 'mainpage.html'
+    
+    def get_context_data(self, **kwargs):
+        industrys = Industry.objects.all()
+        context = super(MainPageView, self).get_context_data(**kwargs)
+        context['industrys'] = industrys
+        return context
 
 class ContactView(FormView, LangListMixin):
     template_name = 'contacts.html'

@@ -524,6 +524,9 @@ p {
 
 /* @MEDIA DEFINITIONS */
 @media only screen and (min-width:0px) and (max-width:850px) {
+    #abouttext {
+        margin-left: 230px;
+    }
     .article > div.articlefull > img {
         max-width: 100%!important;
         max-height: 100%!important;
@@ -578,6 +581,12 @@ p {
     }
 }
 @media only screen and (min-width:0px) and (max-width:650px) {
+    #abouttext {
+        margin-left: 0!important;
+    }
+    .ellipse {
+        position: absolute;
+    }
     #submit {
         width: 100%;
     }
@@ -662,6 +671,9 @@ p {
     }
 }
 @media only screen and (min-width:850px) {
+    #abouttext {
+        margin-left: 230px;
+    }
     #menu {
         margin: 0 auto;
         display: block;

@@ -9,8 +9,8 @@ class Industry(models.Model):
     key = models.SlugField(max_length=10, default='')
     description_ru = models.TextField(verbose_name=_('Краткое описание на русском языке'))
     description_en = models.TextField(verbose_name=_('Краткое описание на английском языке'))
-    content_ru = BBCodeTextField(verbose_name=_('Полное описание на русском языке'))
-    content_en = BBCodeTextField(verbose_name=_('Полное описание на английском языке'))
+    content_ru = BBCodeTextField(max_length=500, verbose_name=_('Полное описание на русском языке'))
+    content_en = BBCodeTextField(max_length=500, verbose_name=_('Полное описание на английском языке'))
     src = models.TextField(blank=True, null=True)
 
     def __str__(self):

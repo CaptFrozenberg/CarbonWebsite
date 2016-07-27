@@ -61,120 +61,40 @@
         вашей заинтересованности мы готовы укомплектовать объект необходимыми материалами.
     {% endblocktrans %}
     </p>
-    <div>
-        <a href="{% url 'showcase' industry='food' %}">
-            <div class="ellipse">
-                <i class="fa fa-cutlery" aria-hidden="true"></i>
+    {% get_current_language as LANGUAGE_CODE %}
+    {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
+        {% for industry in industrys %}
+            <div>
+                <a href="{% url 'showcase' industry=industry.key %}">
+                    <div class="ellipse">
+                        <i class="fa {{ industry.img_key }}" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <p class="sectitle">
+                    {{ industry.title_ru }}
+                </p>
+                <p class="description">
+                    {{ industry.description_ru }}
+                </p>
             </div>
-        </a>
-        <p class="sectitle">
-            {% trans 'Пищевая отрасль' %}
-        </p>
-        <p class="description">
-        {% blocktrans trimmed %}
-            Используя передовые технологии производства и опираясь на свой квалифицированный персонал, 
-            компания «Карбон-Сервис» гарантирует высокое качество выполняемых работ в различных отраслях пищевой промышленности.
-        {% endblocktrans %}
-        </p>
-    </div>
-    <div>
-        <a href="{% url 'showcase' industry='pharma' %}">
-            <div class="ellipse">
-                <i class="fa fa-medkit" aria-hidden="true"></i>
+        {% endfor %}
+    {% else %}
+        {% for industry in industrys %}
+            <div>
+                <a href="{% url 'showcase' industry=industry.key %}">
+                    <div class="ellipse">
+                        <i class="fa {{ industry.img_key }}" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <p class="sectitle">
+                    {{ industry.title_en }}
+                </p>
+                <p class="description">
+                    {{ industry.description_en }}
+                </p>
             </div>
-        </a>
-        <p class="sectitle">
-             {% trans 'Фармацевтика' %}
-        </p>
-        <p class="description">
-        {% blocktrans trimmed %}
-            Инновационный подход и высокие качественные стандарты позволяют нам успешно претворять в жизнь 
-            самые требовательные задачи в области технологических систем фармацевтической промышленности.
-        {% endblocktrans %} 
-        </p>
-    </div>
-    <div>        
-        <a href="{% url 'showcase' industry='cosmetics' %}">
-            <div class="ellipse">
-                <i class="fa fa-user" aria-hidden="true"></i>
-            </div>
-        </a>
-        <p class="sectitle">
-            {% trans 'Косметика' %}
-        </p>
-        <p class="description">
-        {% blocktrans trimmed %}
-            Предприятие «Карбон-Сервис» является компетентным партнером и надежным поставщиком законченных 
-            индивидуальных решений для технологических процессов и систем, применяемых, как в лабораторных, 
-            так и в производственных масштабах.
-        {% endblocktrans %}
-        </p>
-    </div>
-    <div>
-        <a href="{% url 'showcase' industry='car' %}">
-            <div class="ellipse">
-                <i class="fa fa-car" aria-hidden="true"></i>
-            </div>
-        </a>
-        <p class="sectitle">
-            {% trans 'Автопром' %}
-        </p>
-        <p class="description">
-        {% blocktrans trimmed %}
-            Написать
-        {% endblocktrans %}
-        </p>
-    </div>
-    <div>
-        <a href="{% url 'showcase' industry='chemistry' %}">
-            <div class="ellipse">
-                <i class="fa fa-flask" aria-hidden="true"></i>
-            </div>
-        </a>
-        <p class="sectitle">
-            {% trans 'Химия' %}
-        </p>
-        <p class="description">
-        {% blocktrans trimmed %}
-            Написать
-        {% endblocktrans %}
-        </p>
-    </div>
-    <div>
-        <a href="{% url 'showcase' industry='milk' %}">
-            <div class="ellipse">
-                <img style="color: white; margin-top: 60px;" width="80" src="data:image/svg+xml;utf8;base64,
-                PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NT
-                ktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gL
-                iBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAv
-                c3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2F
-                wYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDM4LjQ4NCAzOC40ODQiIHN0eWxlPSJlbmFibGUtYmFja2
-                dyb3VuZDpuZXcgMCAwIDM4LjQ4NCAzOC40ODQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhla
-                WdodD0iNTEycHgiPgo8Zz4KCTxnIGlkPSJiMTk2X21pbGsiPgoJCTxwYXRoIGQ9Ik0xOC4zOTIsMy4xNDVjMC40MjEt
-                MC4yNjYsMC43MS0wLjgzMiwwLjcxLTEuNDkyQzE5LjEwMiwwLjc0LDE4LjU0NywwLDE3Ljg2NCwwSDkuMDQ5QzguMzY
-                2LDAsNy44MTMsMC43NCw3LjgxMywxLjY1MiAgICBjMCwwLjY2LDAuMjg4LDEuMjI3LDAuNzA5LDEuNDkyYy0xLjg5LD
-                IuNTc0LTMuNzk5LDYuNzY0LTMuODk0LDYuOTcxbC0wLjExNSwwLjI1OHYwLjI3OXYyMy40MjJjMCwyLjQzLDEuOTc4L
-                DQuNDEsNC40MDUsNC40MSAgICBoOS4wNzZjMi40MzEsMCw0LjQwOS0xLjk4LDQuNDA5LTQuNDFWMTAuNjUydi0wLjI4
-                MWwtMC4xMTgtMC4yNTZDMjIuMTkxLDkuOTA4LDIwLjI4MSw1LjcxOSwxOC4zOTIsMy4xNDV6IE0xMy4zMjYsMTAuNjU
-                yICAgIGMtMy4xMTEsMi4zMzQtNy41MTcsMC03LjUxNywwczIuMjg5LTUuMDUxLDQuMjI5LTcuMzQ2aDYuODM2YzEuOT
-                M4LDIuMjk1LDQuMjI5LDcuMzQ2LDQuMjI5LDcuMzQ2UzE2LjQzNSw4LjMyLDEzLjMyNiwxMC42NTJ6IiBmaWxsPSIjR
-                kZGRkZGIi8+CgkJPHBhdGggZD0iTTIyLjkzNCwyMy42NmwxLjA5NSwxNC40MzZoOC44NDlsMS4wOTQtMTQuNDM2SDIy
-                LjkzNHogTTI4LjUzNywyNy43MzhjLTEuMjk2LDAuODc5LTQuNTE2LTAuMDItNC41MTYtMC4wMmwtMC4yNTEtMy4yNzk
-                gICAgaDkuMzZsLTAuMjQ5LDMuMzE2QzMyLjg4MiwyNy43NTYsMjkuODMzLDI2Ljg1NywyOC41MzcsMjcuNzM4eiIgZm
-                lsbD0iI0ZGRkZGRiIvPgoJPC9nPgoJPGcgaWQ9IkNhcGFfMV8xNzlfIj4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KP
-                C9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8
-                Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
-            </div>
-        </a>
-        <p class="sectitle">
-            {% trans 'Молочные продукты' %}
-        </p>
-        <p class="description">
-        {% blocktrans trimmed %}
-            Написать
-        {% endblocktrans %}
-        </p>
-    </div>
+        {% endfor %}
+    {% endif %}
 </div>      
 <div id="branches">
     <p class="title">{% trans 'Филиалы' %}  </p>
