@@ -1,9 +1,11 @@
 {% extends 'main.html' %}
 {% load staticfiles %}
-{% block main %}    
+{% block main %}   
+{% get_current_language as LANGUAGE_CODE %}
+{% if LANGUAGE_CODE == 'ru' %} 
 <div id="newsfull">
     <p class="title">
-        {{ news.title }}
+        {{ news.title_ru }}
         <div class="datetime" style="display: inline;">
             Опубликовано: {{ news.pub_date }}
         </div>
@@ -12,7 +14,24 @@
         <div class="articlefull">
             <img src="{% static 'images/slider/1.jpg' %}" />
             <p class="content">
-                {{ news.content.rendered|safe }}
+                {{ news.content_ru.rendered|safe }}
+            </p>
+        </div>
+    </div>
+</div>
+{% else %}
+<div id="newsfull">
+    <p class="title">
+        {{ news.title_en }}
+        <div class="datetime" style="display: inline;">
+            Published: {{ news.pub_date }}
+        </div>
+    </p>
+    <div class="article">
+        <div class="articlefull">
+            <img src="{% static 'images/slider/1.jpg' %}" />
+            <p class="content">
+                {{ news.content_en.rendered|safe }}
             </p>
         </div>
     </div>
