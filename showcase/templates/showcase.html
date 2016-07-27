@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% load i18n %}
+{% load staticfiles %}
+{% block main %}      
+<div id="about">
+<a>
+
+    <div class="ellipse">
+        {% if industry.img_key %}
+        <i class="fa {{ industry.img_key }}" aria-hidden="true"></i>
+        {% else %}
+        <img style="color: white; margin-top: 60px;" width="80" src="{{ industry.src }}"/>
+        {% endif %}
+    </div>
+    </a>
+    {% get_current_language as LANGUAGE_CODE %}
+    {% if LANGUAGE_CODE == 'ru' %}
+    <div id="abouttext">
+        <h1 class="title"><a href="{% url 'main' %}">О компании</a> » {{ industry.title_ru }}</h1>
+        <p>
+        {{ industry.content_ru.rendered|safe }}
+    </div>
+    {% else %}
+    <div id="abouttext">
+        <h1 class="title"><a href="{% url 'main' %}">About</a> » {{ industry.title_en }}</h1>
+        <p>
+        {{ industry.content_en.rendered|safe }}
+    </div>
+    {% endif %}
+    <p class="title" style="margin-top: 30px;">Completed projects</p>
+    {% for project in projects %}
+
+    {% endfor %}
+</div>   
+{% endblock %}
