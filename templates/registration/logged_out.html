@@ -7,20 +7,20 @@
 {% block ll %}
 <div class="loginform">
     <h2>
-        Выход
+        <img src="{% static 'images/logo.png' %}" width="200" />
     </h2>
     <p class="text">
         Вы успешно вышли с сайта.
     </p>
-    <p>
+    <p style="text-align: center;">
         <a href="{% url 'login' %}">
             <button>
-                Войти снова
+                Войти
             </button>
         </a>
         <a href="{% url 'main' %}" >
             <button>
-                На главную
+                Главная
             </button>
         </a>
     </p>

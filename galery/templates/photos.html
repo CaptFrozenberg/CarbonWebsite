@@ -4,7 +4,9 @@
 {% block main %}    
 <div id="photos">   
     {% if request.user.is_staff %}
+    <a href="../admin/galery/galeryitem/add/">
         <button style="float: right; margin-top: 12px;"> Добавить </button>
+    </a>
     {% endif %}
     <p class="title">Галерея</p>
     <div id="popup">
@@ -20,7 +22,11 @@
     {% for item in items %}
     <div class="photo" onclick="Open(this)" >
         <i class="fa fa-picture-o" aria-hidden="true"></i>
-        <img src="{{ item.image|thumbnail_url:'galery_thumb' }}" alt="{{ item.description }}"/>
+        {% if LANGUAGE_CODE == 'en' %}
+            <img src="{{ item.image|thumbnail_url:'galery_thumb' }}" alt="{{ item.description_en }}"/>
+        {% else %}
+            <img src="{{ item.image|thumbnail_url:'galery_thumb' }}" alt="{{ item.description_ru }}"/>
+        {% endif %}
         <div class="{{ item.image.url }}">
             <p>
                 <i class="fa fa-calendar-o" aria-hidden="true"></i>

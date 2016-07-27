@@ -1,2 +1,4 @@
 *.pyc
 *.pyc
+*.pyc
+news/__pycache__/__init__.cpython-35.pyc

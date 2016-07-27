@@ -4,7 +4,9 @@
 {% block main %}    
 <div id="news">
     {% if request.user.is_staff %}
-        <button style="float: right; margin-top: 12px;"> Добавить </button>
+        <a href="../admin/news/news/add/">
+            <button style="float: right; margin-top: 12px;"> Добавить </button>
+        </a>
     {% endif %}    
     <p class="title">Новости</p>
     {% get_current_language as LANGUAGE_CODE %}
