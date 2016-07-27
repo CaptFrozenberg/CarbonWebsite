@@ -1,5 +1,5 @@
 {% extends 'main.html' %}
-{% load staticfiles %}
+{% load staticfiles i18n %}
 {% block main %}   
 {% get_current_language as LANGUAGE_CODE %}
 {% if LANGUAGE_CODE == 'ru' %} 
@@ -36,4 +36,5 @@
         </div>
     </div>
 </div>
+{% endif %}
 {% endblock %}
