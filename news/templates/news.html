@@ -1,7 +1,8 @@
 {% extends 'main.html' %}
 {% load thumbnail i18n %}
 {% load staticfiles %}
-{% block main %}    
+{% block main %}
+{% get_current_language as LANGUAGE_CODE %}   
 <div id="news">
     {% if request.user.is_staff %}
         <a href="../admin/news/news/add/">
@@ -9,8 +10,7 @@
         </a>
     {% endif %}    
     <p class="title">Новости</p>
-    {% get_current_language as LANGUAGE_CODE %}
-    {% if LANGUAGE_CODE == 'ru' %}
+    {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
         {% for news in news_list %}
         <a href="{% url 'news_detail' news_id=news.id %}">
             <div class="article">

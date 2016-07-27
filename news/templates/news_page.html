@@ -2,7 +2,7 @@
 {% load staticfiles i18n %}
 {% block main %}   
 {% get_current_language as LANGUAGE_CODE %}
-{% if LANGUAGE_CODE == 'ru' %} 
+{% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru'%} 
 <div id="newsfull">
     <p class="title">
         {{ news.title_ru }}
