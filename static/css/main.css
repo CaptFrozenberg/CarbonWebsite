@@ -149,9 +149,26 @@ p {
     color: #fff;
     font-size: 70px;
     margin: 0 auto;
+	transition: background 0.1s linear;
+}
+#directions > div:hover > a > div.ellipse {
+	background: #3c56ba;
+	transition: background 0.2s linear;
+}
+#directions > div:hover > a > p.sectitle {
+	color: #3c56ba;
+	transition: background 0.1s linear, border 0.1s linear;
+	border-color: #3c56ba;
 }
 .ellipse > i {
     margin-top: 60px;
+}
+.description {
+	font-size: 13px;
+}
+#directions > div > i.fa {
+	color: #5369bd;
+	font-size: 80px;
 }
 #cin {
 	position: relative;
@@ -159,9 +176,11 @@ p {
 	height: 338px;
 	background: #f2f2f2;
 }
-#directions > div > p.sectitle {
-    font-size: 26px; 
-    color: #838383;
+.sectitle {
+    font-size: 21px; 
+    color: #6f84d4;
+	font-weight: bold;
+	border-bottom: 2px solid #6f84d4;
     margin-bottom: 0px;
 }
 #branches > p.title {
@@ -638,7 +657,7 @@ p {
     .title {
         font-size: 18px!important;
     }
-    #directions > div > p.sectitle {
+    .sectitle {
         font-size: 20px!important;
     }
     #content {

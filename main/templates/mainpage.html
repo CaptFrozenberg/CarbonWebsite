@@ -52,30 +52,29 @@
     </div>
 </div>    
 <div id="directions">
-    <p class="title">{% trans 'Специализация' %}</p>
-    <p>
-    {% blocktrans trimmed %}
-        На сегодняшний день мы приняли участие более чем в 50 проектах по монтажу оборудования углекислотных станций, емкостного оборудования, 
-        отдельных агрегатов и целых участков производства. Нам по плечу передислокация как отдельных единиц оборудования, так и целых участков 
-        действующего производства. Мы прокладываем кабельные трассы, расключаем электрооборудование, проводим тестирование. В случае 
-        вашей заинтересованности мы готовы укомплектовать объект необходимыми материалами.
-    {% endblocktrans %}
-    </p>
+    <!--<p class="title" style="padding-top: 10px;">{% trans 'Наши услуги' %}</p>
+	<p>
+		Нам по плечу монтаж готовых технологических линий «под ключ», ёмкостей разной степени сложности, с возможностью изготовления 
+		оборудования на заводах партнёров в Центральной России, на Урале и в Сибири, монтаж трубопроводов из нержавеющей стали, 
+		демонтаж, доукомплектация и монтаж новых или б/у упаковочных линий, включая розлив напитков в стекло, банку, пластиковую упаковку. 
+		Также мы проводим пуско-наладочные работы в области электрики и автоматики, с возможностью изготовления силовых шкафов и пультов 
+		управления на предприятиях партнёров.
+	</p>-->
     {% get_current_language as LANGUAGE_CODE %}
     {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
         {% for industry in industrys %}
-            <div>
-                <a href="{% url 'showcase' industry=industry.key %}">
+			<div>
+				<a href="{% url 'showcase' industry=industry.key %}">
                     <div class="ellipse">
-                        <i class="fa {{ industry.img_key }}" aria-hidden="true"></i>
+                        <img style="margin-top: 55px;" src="{{ industry.src }}" />
                     </div>
-                </a>
-                <p class="sectitle">
-                    {{ industry.title_ru }}
-                </p>
-                <p class="description">
-                    {{ industry.description_ru }}
-                </p>
+					<p class="sectitle">
+						{{ industry.title_ru }}
+					</p>
+				</a>
+				<p class="description">
+					{{ industry.description_ru }}
+				</p>
             </div>
         {% endfor %}
     {% else %}
@@ -83,26 +82,26 @@
             <div>
                 <a href="{% url 'showcase' industry=industry.key %}">
                     <div class="ellipse">
-                        <i class="fa {{ industry.img_key }}" aria-hidden="true"></i>
+                        <img style="margin-top: 55px;" src="{{ industry.src }}" />
                     </div>
-                </a>
-                <p class="sectitle">
-                    {{ industry.title_en }}
-                </p>
-                <p class="description">
-                    {{ industry.description_en }}
-                </p>
+					<p class="sectitle">
+						{{ industry.title_en }}
+					</p>
+				</a>
+				<p class="description">
+					{{ industry.description_en }}
+				</p>
             </div>
         {% endfor %}
     {% endif %}
 </div>      
 <div id="branches">
-    <p class="title">{% trans 'Филиалы' %}  </p>
+    <p class="title">{% trans 'ОФисы компании' %}  </p>
     <p>
     {% blocktrans trimmed %}
-        Компания «Карбон-Сервис» имеет филиалы в таких странах, как Германия, Украина, Бразилия. Руководство компании работает в 
-        направлении оптимизации реализации проектов, координирует выполнение проектов в реальном времени и всегда находится в 
-        контакте со своими клиентами.
+        Компания «Карбон-Сервис» имеет представительства в таких странах, как Германия, Украина, Бразилия. Руководство компании 
+		работает в направлении оптимизации реализации проектов, координирует выполнение проектов в реальном времени и всегда 
+		находится в контакте со своими клиентами.
     {% endblocktrans %}
     </p> 
     <div>

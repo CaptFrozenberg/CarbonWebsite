@@ -6,11 +6,7 @@
 <a>
 
     <div class="ellipse">
-        {% if industry.img_key %}
-        <i class="fa {{ industry.img_key }}" aria-hidden="true"></i>
-        {% else %}
         <img style="color: white; margin-top: 60px;" width="80" src="{{ industry.src }}"/>
-        {% endif %}
     </div>
     </a>
     {% get_current_language as LANGUAGE_CODE %}
