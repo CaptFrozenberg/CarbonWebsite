@@ -131,10 +131,12 @@ p {
 }
 #directions {
     margin-top: 40px;
+	margin-left: -10px;
+	margin-right: -10px;
     text-align: center;
 }
 #directions > div {
-    width: 290px;
+    width: 300px;
     margin: 10px;
     padding-top: 20px;
     display: inline-block;
@@ -606,6 +608,10 @@ p {
     }
 }
 @media only screen and (min-width:0px) and (max-width:650px) {
+	#directions {
+		margin-left: 0!important;
+		margin-right: 0!important;
+	}
     #abouttext {
         margin-left: 0!important;
     }
