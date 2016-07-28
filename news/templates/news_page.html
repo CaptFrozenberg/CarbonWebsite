@@ -12,7 +12,7 @@
     </p>
     <div class="article">
         <div class="articlefull">
-            <img src="{% static 'images/slider/1.jpg' %}" />
+            <img src="{{ news.image.url }}" />
             <p class="content">
                 {{ news.content_ru.rendered|safe }}
             </p>
@@ -29,7 +29,7 @@
     </p>
     <div class="article">
         <div class="articlefull">
-            <img src="{% static 'images/slider/1.jpg' %}" />
+            <img src="{{ news.image.url }}" />
             <p class="content">
                 {{ news.content_en.rendered|safe }}
             </p>

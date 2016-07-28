@@ -153,6 +153,12 @@ p {
 .ellipse > i {
     margin-top: 60px;
 }
+#cin {
+	position: relative;
+	width: 600px;
+	height: 338px;
+	background: #f2f2f2;
+}
 #directions > div > p.sectitle {
     font-size: 26px; 
     color: #838383;
@@ -584,9 +590,6 @@ p {
     #abouttext {
         margin-left: 0!important;
     }
-    .ellipse {
-        position: absolute;
-    }
     #submit {
         width: 100%;
     }
@@ -611,7 +614,7 @@ p {
         width: 100%;
         height: auto;
     }
-    ymaps {
+    #cin {
         display: none!important;
         width: 0!important;
         height: 0!important;

@@ -6,7 +6,15 @@
     <p class="title">
         Контакты
     </p>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fY35A_q6pcCA9sHXU6kAN4tyfTzpULSB&amp;width=600&amp;height=338&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+	<div id="cin" >
+		<div style="position: absolute; z-index: 2;">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fY35A_q6pcCA9sHXU6kAN4tyfTzpULSB&amp;width=600&amp;height=338&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+		</div>
+		<div style="position: absolute; top: 40%; left: 35%; z-index: 1; display: block;" >
+			<img src="{% static 'images/loader.gif' %}" /> 
+			<p style="padding: 10px 20px; display: inline; vertical-align: top; font-size: 20px; color: #5369bd">Загрузка...</p>
+		</div>
+	</div>
 </div>
 
 <div class="contacttext">
