@@ -2,7 +2,7 @@
 html {
     width: 100%;
     min-height: 100%;
-    font-family: "Open Sans", Arial, sans-serif;
+    font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
     font-size: 14px;
     min-width: 320px;
 }
@@ -23,7 +23,7 @@ body {
     background-attachment: fixed;
 }
 button {
-    font-family: "Open Sans", Arial, sans-serif !important;
+    font-family: inherit!important;
     text-transform: uppercase;
     font-weight: bold;
     padding: 10px 20px;
@@ -100,7 +100,7 @@ p {
     list-style: none;
 }
 #submit {
-    font-family: "Open Sans", Arial, sans-serif !important;
+    font-family: inherit!important;
     text-transform: uppercase;
     font-weight: bold;
     padding: 10px 20px;
@@ -509,7 +509,7 @@ p {
     margin: 25px auto;
 }
 .loginform > form > div > input {
-    font-family: "Open Sans", Arial, sans-serif !important;
+    font-family: inherit!important;
     text-transform: uppercase;
     font-weight: bold;
     padding: 10px 20px;
