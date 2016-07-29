@@ -35,10 +35,10 @@ button {
     letter-spacing: 1px;
     font-size: 14px;
     margin: 5px 0;
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
 }
 button:hover {
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
     background: #8195e1;
     cursor: pointer;
 }
@@ -113,10 +113,10 @@ p {
     font-size: 14px;
     margin: 5px 0;
     cursor: pointer;
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
 }
 #submit:hover {
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
     background: #8195e1;
     cursor: pointer;
 }
@@ -155,11 +155,11 @@ p {
 }
 #directions > div:hover > a > div.ellipse {
 	background: #3c56ba;
-	transition: background 0.2s linear;
+	transition: background 0.1s linear;
 }
 #directions > div:hover > a > p.sectitle {
 	color: #3c56ba;
-	transition: background 0.1s linear, border 0.1s linear;
+	transition: color 0.1s linear, border-color 0.1s linear;
 	border-color: #3c56ba;
 }
 .ellipse > i {
@@ -184,6 +184,7 @@ p {
 	font-weight: bold;
 	border-bottom: 2px solid #6f84d4;
     margin-bottom: 0px;
+	transition: color 0.1s linear, border 0.1s linear;
 }
 #branches > p.title {
     margin-bottom: 0px;
@@ -218,7 +219,7 @@ p {
     z-index: 20;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.2s linear;
+    transition: visibility 0s, opacity 0.1s linear;
 }
 #popup > div {
     position: absolute;
@@ -289,10 +290,12 @@ p {
 }
 .article > img {
     display: inline-block;
-    width: 150px;
+    width: 130px;
     border-radius: 75px;
     margin: 5px 0;
     margin-bottom: 10px;
+	opacity: 0.7;
+	transition: opacity 0.1s linear;
 }
 .article > div.articleinfo {
     display: inline-block;
@@ -301,12 +304,20 @@ p {
     vertical-align: top;
 }
 .article > div.articleinfo > div.newstitle {
-    color: #5369bd;
+    color: #6f84d4;
     font-size: 18px;
     margin-bottom: 10px;
     display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bold;	
+	transition: color 0.1s linear;
+}
+.article:hover > div.articleinfo > div.newstitle {
+	color: #3c56ba;
+	transition: color 0.1s linear;
+}
+.article:hover > img {
+	opacity: 1;
+	transition: opacity 0.1s linear;
 }
 .article > div.articleinfo > div.content {
     display: block;
@@ -343,10 +354,10 @@ p {
     box-sizing: border-box;
     font-size: 14px;
     font-family: inherit;
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
 }
 .contactform > form > input:focus {
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
     background: #fafafa;
 }
 .contactform > form > textarea {
@@ -360,11 +371,11 @@ p {
     font-family: inherit;
     font-size: 14px;
     resize: none;
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
     box-sizing: border-box;
 }
 .contactform > form > textarea:focus {
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
     background: #fafafa;
 }
 .contactform > form > input#name {
@@ -456,7 +467,7 @@ p {
 .photo:hover > i {
     opacity: 1;
     cursor: pointer;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 0.1s ease-out;
 }
 .spressed > form > input {
     margin-bottom: -5px;
@@ -505,11 +516,11 @@ p {
     letter-spacing: 1px;
     font-size: 14px;
     margin: 10px 0px;
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
     width: 220px;
 }
 .loginform > form > div > input:hover {
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
     background: #8195e1;
     cursor: pointer;
 }
@@ -531,12 +542,12 @@ p {
     border: 1px solid #eaeaea;
     padding: 12px 10px;
     background: #eaeaea;
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
 }
 .form-field > div.control > input:focus {
     background: #f9f9f9;
     border: 1px solid #eaeaea;
-    transition: background 0.2s ease-out;
+    transition: background 0.1s ease-out;
 }
 .form-field > div.label {
     font-size: 13px;
@@ -729,10 +740,10 @@ p {
         display: inline-block;
         margin: 0 10px;
         vertical-align: middle;
-        transition: text-shadow 0.2s ease-out;
+        transition: text-shadow 0.1s ease-out;
     }
     #menu > ul > li:hover {
-        transition: text-shadow 0.2s ease-out;
+        transition: text-shadow 0.1s ease-out;
         text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
         cursor: pointer;
     }
