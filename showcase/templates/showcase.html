@@ -29,8 +29,18 @@
     <p class="title" style="margin-top: 30px;">Completed projects</p>
     {% endif %}
     
-    {% for project in projects %}
-
-    {% endfor %}
+    {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
+    	{% for project in projects %}
+    		<h2 class="title">{{ project.name_ru }}<h2>
+    		<div class="description" style="font-weight: normal;">
+    			{{ project.content_ru.rendered|safe }}
+    		</div>	
+    	{% endfor %}
+    {% else %}
+    	{% for project in projects %}
+    		{{ project.name_en }}
+    		{{ project.content_en.rendered|safe }}
+    	{% endfor %}
+    {% endif %}
 </div>   
 {% endblock %}

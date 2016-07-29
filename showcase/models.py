@@ -17,8 +17,8 @@ class Industry(models.Model):
         return self.title_ru
 
 class Project(models.Model):
-    name_ru = models.CharField(max_length=50, verbose_name=_('Название на русском языке'))
-    name_en = models.CharField(max_length=50, verbose_name=_('Название на английском языке'))
+    name_ru = models.CharField(max_length=250, verbose_name=_('Название на русском языке'))
+    name_en = models.CharField(max_length=250, verbose_name=_('Название на английском языке'))
     content_ru = BBCodeTextField(verbose_name=_('Содержание на русском языке'))
     content_en = BBCodeTextField(verbose_name=_('Содержание на английском языке'))
     industry = models.ForeignKey(Industry, verbose_name=_('Отрасль'))
