@@ -63,35 +63,35 @@
     {% get_current_language as LANGUAGE_CODE %}
     {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
         {% for industry in industrys %}
-			<div>
-				<a href="{% url 'showcase' industry=industry.key %}">
+			<a href="{% url 'showcase' industry=industry.key %}">
+				<div>
                     <div class="ellipse">
                         <img style="margin-top: 55px;" src="{{ industry.src }}" />
                     </div>
 					<p class="sectitle">
 						{{ industry.title_ru }}
 					</p>
-				</a>
-				<p class="description">
-					{{ industry.description_ru }}
-				</p>
-            </div>
+					<p class="description">
+						{{ industry.description_ru }}
+					</p>
+				</div>
+			</a>
         {% endfor %}
     {% else %}
         {% for industry in industrys %}
-            <div>
-                <a href="{% url 'showcase' industry=industry.key %}">
-                    <div class="ellipse">
-                        <img style="margin-top: 55px;" src="{{ industry.src }}" />
-                    </div>
+			<a href="{% url 'showcase' industry=industry.key %}">
+				<div>
+					<div class="ellipse">
+						<img style="margin-top: 55px;" src="{{ industry.src }}" />
+					</div>
 					<p class="sectitle">
 						{{ industry.title_en }}
 					</p>
-				</a>
-				<p class="description">
-					{{ industry.description_en }}
-				</p>
-            </div>
+					<p class="description">
+						{{ industry.description_en }}
+					</p>
+				</div>
+			</a>
         {% endfor %}
     {% endif %}
 </div>      

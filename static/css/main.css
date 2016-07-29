@@ -124,9 +124,14 @@ p {
     background: #6175c1;
     cursor: pointer;
 }
-#about > div + div {
+#about > div + div#abouttext {
     display: inline-block;
     margin-left: 350px;
+    vertical-align: top;
+}
+#aboutshowcase {
+	display: inline-block;
+	margin-left: 240px;
     vertical-align: top;
 }
 #directions {
@@ -135,7 +140,7 @@ p {
 	margin-right: -10px;
     text-align: center;
 }
-#directions > div {
+#directions > a > div {
     width: 300px;
     margin: 10px;
     padding-top: 20px;
@@ -153,11 +158,11 @@ p {
     margin: 0 auto;
 	transition: background 0.1s linear;
 }
-#directions > div:hover > a > div.ellipse {
+#directions > a:hover > div > div.ellipse {
 	background: #3c56ba;
 	transition: background 0.1s linear;
 }
-#directions > div:hover > a > p.sectitle {
+#directions > a:hover > div > p.sectitle {
 	color: #3c56ba;
 	transition: color 0.1s linear, border-color 0.1s linear;
 	border-color: #3c56ba;
@@ -168,7 +173,7 @@ p {
 .description {
 	font-size: 13px;
 }
-#directions > div > i.fa {
+#directions > a > div > i.fa {
 	color: #5369bd;
 	font-size: 80px;
 }
@@ -292,7 +297,7 @@ p {
     display: inline-block;
     width: 130px;
     border-radius: 75px;
-    margin: 5px 0;
+    margin: 0;
     margin-bottom: 10px;
 	opacity: 0.7;
 	transition: opacity 0.1s linear;
@@ -572,6 +577,7 @@ p {
     .article > div.articleinfo {
         width: 100%;
         padding: 0;
+		padding-top: 10px;
     }
     #menu {
         margin: 0 auto;
@@ -680,9 +686,6 @@ p {
     #content {
         padding: 20px!important;
     }
-    #directions > div {
-        width: 100%!important;
-    }
     #about > div.slider {
         margin: 0 auto!important;
         display: block!important;
@@ -694,8 +697,9 @@ p {
     #about > div + div {
         margin-left: 0!important;
     }
-    #directions > div {
+    #directions > a > div {
         margin: 0!important;
+		width: 100%!important;
     }
 }
 @media only screen and (min-width:650px) and (max-width:850px) {
@@ -707,12 +711,21 @@ p {
     #abouttext > h1 {
         padding-top: 0;
         margin-top: 0;
-    }
+	}
+	#about > div.ellipse {
+		display: inline-block;
+		position: absolute;
+	}
 }
 @media only screen and (min-width:850px) {
     #abouttext {
         margin-left: 230px;
     }
+	#about > div.ellipse {
+		display: inline-block;
+		position: absolute;
+		margin-top: 10px;
+	}
     #menu {
         margin: 0 auto;
         display: block;
