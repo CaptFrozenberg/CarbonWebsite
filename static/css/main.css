@@ -131,8 +131,19 @@ p {
 }
 #aboutshowcase {
 	display: inline-block;
-	margin-left: 240px;
+	margin-left: 200px;
     vertical-align: top;
+	margin-bottom: 20px;
+}
+#aboutshowcase > p {
+	min-height: 100px;
+}
+#about > div.ellipse {
+	width: 160px;
+	height: 160px;
+}
+#about > div.ellipse > img {
+	margin-top: 40px!important;
 }
 #directions {
     margin-top: 40px;
@@ -284,6 +295,13 @@ p {
     font-size: 21px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+.title > a {
+	transition: color 0.1s linear;
+}
+.title > a:hover {
+	color: #3c56ba;
+	transition: color 0.1s linear;
 }
 .article {
     padding: 15px 0;

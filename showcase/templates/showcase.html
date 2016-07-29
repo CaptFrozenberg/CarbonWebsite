@@ -8,38 +8,38 @@
     </div>
     {% get_current_language as LANGUAGE_CODE %}
     {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
-    <div id="aboutshowcase">
-        <h1 class="title">
-			<a href="{% url 'main' %}">О компании</a> » {{ industry.title_ru }}
-		</h1>
-        <p style="min-height: 130px">
-        {{ industry.content_ru.rendered|safe }}
-		</p>
-    </div>
-    <p class="title" style="margin-top: 30px;">Завершенные проекты</p>
+		<div id="aboutshowcase">
+			<h1 class="title">
+				<a href="{% url 'main' %}">О компании</a> » {{ industry.title_ru }}
+			</h1>
+			<p>
+			{{ industry.content_ru.rendered|safe }}
+			</p>
+		</div>
     {% else %}
-    <div id="abouttext">
-        <h1 class="title">
-			<a href="{% url 'main' %}">About</a> » {{ industry.title_en }}
-		</h1>
-        <p style="min-height: 130px"> 
-        {{ industry.content_en.rendered|safe }}
-		</p>
-    </div>
-    <p class="title" style="margin-top: 30px;">Completed projects</p>
+		<div id="aboutshowcase">
+			<h1 class="title">
+				<a href="{% url 'main' %}">About</a> » {{ industry.title_en }}
+			</h1>
+			<p> 
+			{{ industry.content_en.rendered|safe }}
+			</p>
+		</div>
     {% endif %}
     
     {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
     	{% for project in projects %}
     		<h2 class="title">{{ project.name_ru }}<h2>
-    		<div class="description" style="font-weight: normal;">
+    		<div class="description" style="font-weight: normal; font-size: 14px; line-height: 1.7em;">
     			{{ project.content_ru.rendered|safe }}
     		</div>	
     	{% endfor %}
     {% else %}
     	{% for project in projects %}
-    		{{ project.name_en }}
-    		{{ project.content_en.rendered|safe }}
+    		<h2 class="title">{{ project.name_en }}<h2>
+    		<div class="description" style="font-weight: normal; font-size: 14px; line-height: 1.7em;">
+    			{{ project.content_en.rendered|safe }}
+    		</div>	
     	{% endfor %}
     {% endif %}
 </div>   
