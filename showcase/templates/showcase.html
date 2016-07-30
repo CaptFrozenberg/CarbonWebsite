@@ -26,7 +26,16 @@
 			</p>
 		</div>
     {% endif %}
-    
+    <div id="popup">
+        <div>
+            <img src="" />
+            <p> Описание картинки. Очень длинное, чтобы можно было увидеть, как себя поведут элементы, 
+            если вот прямо сюда понаписать очень много букв. А потом в конец предложения дописать ещё 
+            несколько букв. А потом написать целый рассказ о том, как ты писал много букв в описание 
+            к картинке. Зачем? </p>
+            <i class="fa fa-close" aria-hidden="true" onclick="Close(this)" ></i>
+        </div>
+    </div>
     {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
     	{% for project in projects %}
     		<h2 class="title">{{ project.name_ru }}<h2>
@@ -43,4 +52,16 @@
     	{% endfor %}
     {% endif %}
 </div>   
+<script type="text/javascript">
+    function Open(div) {
+        var popup = document.getElementById('popup');
+        popup.setAttribute("style", "visibility: visible; opacity: 1;");
+        popup.children[0].children[0].src = div.children[2].className;
+        popup.children[0].children[1].innerHTML = div.children[1].alt;
+    }             
+    function Close(i) {
+        var target = i.parentElement.parentElement;
+        target.setAttribute("style", "opacity: 0; visibility: hidden; transition: visibility 0.21s, opacity 0.2s linear;");
+    }      
+</script>
 {% endblock %}
