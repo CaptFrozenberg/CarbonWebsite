@@ -11,7 +11,7 @@
     {% endif %}    
     <p class="title">{% trans 'Новости' %}</p>
     {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
-        {% for news in news_list %}
+        {% for news in latest %}
         <a href="{% url 'news_detail' news_id=news.id %}">
             <div class="article">
                 <img src="{{ news.image|thumbnail_url:'news_thumb' }}" />
@@ -30,7 +30,7 @@
         </a>
         {% endfor %}
     {% else %}
-        {% for news in news_list %}
+        {% for news in latest %}
         <a href="{% url 'news_detail' news_id=news.id %}">
             <div class="article">
                 <img src="{{ news.image|thumbnail_url:'news_thumb' }}" />
