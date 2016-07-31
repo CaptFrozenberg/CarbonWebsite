@@ -4,7 +4,7 @@
 {% block main %}    
 <div id="contacts">
     <p class="title">
-        Контакты
+        {% trans 'Контакты' %}
     </p>
 	<div id="cin" >
 		<div style="position: absolute; z-index: 2;">
@@ -12,14 +12,14 @@
 		</div>
 		<div style="position: absolute; top: 40%; left: 35%; z-index: 1; display: block;" >
 			<img src="{% static 'images/loader.gif' %}" /> 
-			<p style="padding: 10px 20px; display: inline; vertical-align: top; font-size: 20px; color: #5369bd">Загрузка...</p>
+			<p style="padding: 10px 20px; display: inline; vertical-align: top; font-size: 20px; color: #5369bd">{% trans 'Загрузка...' %}</p>
 		</div>
 	</div>
 </div>
 
 <div class="contacttext">
     <p class="capstitle">
-        Телефоны
+        {% trans 'Телефоны' %}
     </p>
     <div class="cont">
         <p>
@@ -35,19 +35,19 @@
 
     </div>
     <p class="capstitle">
-        Адрес главного офиса
+        {% trans 'Адрес главного офиса' %}
     </p>
     <div class="cont">
         <p>
             <font style="font-size: 14px; font-weight: normal;line-height: 1em!important;"> 
-                г.Москва, 127322, Огородный проезд, 20
+                {% trans 'г.Москва, 127322, Огородный проезд, 20' %}
             </font>
         </p>
     </div>
 </div>
 
 <div id="branches">
-    <p class="title"> Все офисы </p>
+    <p class="title">{% trans 'Все офисы' %}</p>
     <div>
         <img src="{% static 'images/Russia.png' %}" />
         <p>
@@ -103,7 +103,7 @@
 
 <div id="sayhello">
     <p class="title">
-        Напишите нам
+        {% trans 'Напишите нам' %}
     </p>
     <div class="contactform">
         <form action="" method="post">
@@ -117,7 +117,7 @@
             {{ form.subject}}
             {{ form.content.errors }}
             {{ form.content}}            
-            <input id="submit" type="submit" value="Отправить сообщение" />
+            <input id="submit" type="submit" value="{% trans 'Отправить сообщение' %}" />
         </form>       
     </div>
 </div>

@@ -23,7 +23,7 @@
                     <a href="{% url 'news' %}">{% trans 'Новости' %}</a>
                 </li>
                 <li>
-                    <a href="{% url 'galery' %}">{% trans 'Фотогалерея' %}</a>
+                    <a href="{% url 'galery' %}">{% trans 'Галерея' %}</a>
                 </li>
                 <li>
                     <a href="{% url 'contact' %}">{% trans 'Контакты' %}</a>
@@ -59,12 +59,12 @@
 </div>
 
 <div id="footer">
-(c) 2016 CARBON-SERVICE All rights reserved.
+ © 2016 «CARBON-SERVICE» Ltd. All rights reserved.
 {% if request.user.is_authenticated %}
 <a href="/logout/" style="display: block; float: right;">Выйти</a>
 <a href="/admin/" style="display: block; float: right; padding-right: 10px; color: rgb(254, 146, 146);">Администрирование</a>
 {% else %}
-<a href="/login/" style="display: block; float: right;">Войти</a>
+<a href="/login/" style="display: block; float: right;">{% trans 'Войти' %}</a>
 {% endif %}
 
 </div>

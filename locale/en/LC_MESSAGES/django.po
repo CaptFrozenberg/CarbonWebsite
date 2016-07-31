@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-22 14:54+0300\n"
+"POT-Creation-Date: 2016-07-31 21:20+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,174 +17,238 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\CarbonWebsite\settings.py:123
-msgid "Russian"
+#: .\galery\models.py:5 .\showcase\models.py:6 .\showcase\models.py:20
+msgid "Название на русском языке"
 msgstr ""
 
-#: .\CarbonWebsite\settings.py:124
-msgid "English"
+#: .\galery\models.py:6 .\showcase\models.py:7 .\showcase\models.py:21
+msgid "Название на английском языке"
 msgstr ""
 
-#: .\CarbonWebsite\settings.py:125
-msgid "German"
+#: .\galery\models.py:7
+msgid "Описание на русском языке"
 msgstr ""
+
+#: .\galery\models.py:8
+msgid "Описание на английском языке"
+msgstr ""
+
+#: .\galery\models.py:9 .\news\models.py:8
+msgid "Дата публикации"
+msgstr ""
+
+#: .\galery\models.py:10 .\news\models.py:13
+msgid "Изображение"
+msgstr ""
+
+#: .\galery\models.py:11 .\news\models.py:14
+msgid "Укажите файл изображения"
+msgstr ""
+
+#: .\galery\models.py:12 .\news\models.py:15
+msgid "Данный формат изображения не поддерживается сайтом"
+msgstr ""
+
+#: .\galery\models.py:13 .\news\models.py:16
+msgid "Выгружаемый файл пуст"
+msgstr ""
+
+#: .\galery\templates\photos.html:9 .\news\templates\news.html:9
+msgid "Добавить"
+msgstr "Add item"
+
+#: .\galery\templates\photos.html:12 .\templates\main.html:26
+msgid "Галерея"
+msgstr "Photos"
+
+#: .\main\forms.py:7
+msgid "Имя"
+msgstr "Name"
+
+#: .\main\forms.py:11
+msgid "Тема сообщения"
+msgstr "Message title"
+
+#: .\main\forms.py:13
+msgid "Текст сообщения"
+msgstr "Message text"
+
+#: .\main\forms.py:19
+msgid "Ответить на адрес"
+msgstr "Reply to"
+
+#: .\main\forms.py:20
+msgid "С наилучшими пожеланиями"
+msgstr "Regards,"
+
+#: .\main\templates\contacts.html:7 .\templates\main.html:29
+msgid "Контакты"
+msgstr "Contacts"
+
+#: .\main\templates\contacts.html:15
+msgid "Загрузка..."
+msgstr "Loading..."
+
+#: .\main\templates\contacts.html:22
+msgid "Телефоны"
+msgstr "Phones"
+
+#: .\main\templates\contacts.html:38
+msgid "Адрес главного офиса"
+msgstr "Head office location"
+
+#: .\main\templates\contacts.html:43
+msgid "г.Москва, 127322, Огородный проезд, 20"
+msgstr "Moscow city, 127322, Ogorodny Proezd, 20"
+
+#: .\main\templates\contacts.html:50
+msgid "Все офисы"
+msgstr "All offices"
+
+#: .\main\templates\contacts.html:106
+msgid "Напишите нам"
+msgstr "Contact us"
+
+#: .\main\templates\contacts.html:120
+msgid "Отправить сообщение"
+msgstr "Send mail"
 
 #: .\main\templates\mainpage.html:11
-msgid ""
-"Монтаж технологического оборудования и ЦКТ, \"Ставропольский пивоваренный "
-"завод\", г. Ставрополь"
-msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-
-#: .\main\templates\mainpage.html:17
-msgid ""
-"\"РОСА\", Казахстан, г. Павлодар монтаж ЦКТ, заказчик компания HOLVRIEKA."
-msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-
-#: .\main\templates\mainpage.html:23
-msgid ""
-"Увеличение размеров танков для воды, заказчик компания VAN DER MOLEN, "
-"\"PEPSI COLA\", Москва"
-msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-
-#: .\main\templates\mainpage.html:29
 msgid ""
 "Монтаж конвейеров линии розлива, заказчик компания KRONES, \"PEPSI COLA\", "
 "г. Самара"
 msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
+"Installation of pipelines. Ordered by KRONES AG, \"Pepsi Cola\", Samara city"
 
-#: .\main\templates\mainpage.html:36 .\templates\main.html:16
+#: .\main\templates\mainpage.html:17
+msgid ""
+"Монтаж технологического оборудования и ЦКТ, \"Ставропольский пивоваренный "
+"завод\", г. Ставрополь"
+msgstr ""
+"Technological equipment and CKT maintaining, \"Stavropol beer industries\", "
+"Stavropol city"
+
+#: .\main\templates\mainpage.html:23
+msgid ""
+"\"РОСА\", Казахстан, г. Павлодар монтаж ЦКТ, заказчик компания HOLVRIEKA."
+msgstr ""
+"\"ROSA\", Kazakhstan, Pavlodar city. CKT maintaining, ordered by HOLVRIEKA."
+
+#: .\main\templates\mainpage.html:29
+msgid ""
+"Увеличение размеров танков для воды, заказчик компания VAN DER MOLEN, "
+"\"PEPSI COLA\", Москва"
+msgstr ""
+"Water tanks increasing. Ordered by VAN DER MOLEN, \"PEPSI COLA\", Moscow "
+"city "
+
+#: .\main\templates\mainpage.html:35 .\templates\main.html:20
 msgid "О компании"
-msgstr "строка переведенная на английский"
+msgstr "About us"
 
-#: .\main\templates\mainpage.html:38
+#: .\main\templates\mainpage.html:37
 msgid ""
 "ООО «Карбон-Сервис» специализируется на монтаже и наладке процессного и "
 "упаковочного оборудования на предприятиях пищевой, косметической и "
 "фармацевтической промышленностях."
 msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-#: .\main\templates\mainpage.html:44
+"«CARBON-SERVICE» specializes in process and packaging equipment maintaining "
+"and adjustment for companies working in food, cosmetic, pharmaceutical, auto "
+"and other industries."
+
+#: .\main\templates\mainpage.html:43
 msgid ""
 "Имея 24-летний опыт работы в данной области, мы предлагаем смелые "
 "конструктивные решения, которые позволяют сократить время монтажа и тем "
 "самым выиграть в сроках реализации всего проекта."
 msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
+"We have 24 years of working experience in this branch and offer bold and "
+"constructive solutions that help our clients to reduce maintaining time and "
+"benefit in whole project realization time."
 
 #: .\main\templates\mainpage.html:50
 msgid "Связаться с нами"
-msgstr "строка переведенная на английский"
+msgstr "Contact us"
 
-#: .\main\templates\mainpage.html:54
-msgid "Специализация компании"
-msgstr "строка переведенная на английский"
+#: .\main\templates\mainpage.html:91
+msgid "ОФисы компании"
+msgstr "Company branches"
 
-#: .\main\templates\mainpage.html:56
+#: .\main\templates\mainpage.html:93
 msgid ""
-"На сегодняшний день мы приняли участие более чем в 50 проектах по монтажу "
-"оборудования углекислотных станций, емкостного оборудования, отдельных "
-"агрегатов и целых участков производства. Нам по плечу передислокация как "
-"отдельных единиц оборудования, так и целых участков действующего "
-"производства. Мы прокладываем кабельные трассы, расключаем "
-"электрооборудование, проводим тестирование. В случае вашей "
-"заинтересованности мы готовы укомплектовать объект необходимыми материалами."
+"Компания «Карбон-Сервис» имеет представительства в таких странах, как "
+"Германия, Украина, Бразилия. Руководство компании работает в направлении "
+"оптимизации реализации проектов, координирует выполнение проектов в реальном "
+"времени и всегда находится в контакте со своими клиентами."
 msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
+"«CARBON-SERVICE» company has agencies in such countries, as Germany, "
+"Ukraine, Brazil. Our administration works towargs projects realization "
+"optimization, coordinates the implementation of projects and is always in "
+"contact with clients."
 
-#: .\main\templates\mainpage.html:68
-msgid "Пищевая отрасль"
-msgstr "строка переведенная на английский"
+#: .\main\templates\mainpage.html:152
+msgid "Наши партнёры"
+msgstr "Our partners"
 
-#: .\main\templates\mainpage.html:71
-msgid ""
-"Используя передовые технологии производства и опираясь на свой "
-"квалифицированный персонал, компания «Карбон-Сервис» гарантирует высокое "
-"качество выполняемых работ в различных отраслях пищевой промышленности."
-msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-
-#: .\main\templates\mainpage.html:82
-msgid "Фармацевтика"
-msgstr "строка переведенная на английский"
-
-#: .\main\templates\mainpage.html:85
-msgid ""
-"Инновационный подход и высокие качественные стандарты позволяют нам успешно "
-"претворять в жизнь самые требовательные задачи в области технологических "
-"систем фармацевтической промышленности."
-msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-
-#: .\main\templates\mainpage.html:96
-msgid "Косметика"
-msgstr "строка переведенная на английский"
-
-#: .\main\templates\mainpage.html:99
-msgid ""
-"Предприятие «Карбон-Сервис» является компетентным партнером и надежным "
-"поставщиком законченных индивидуальных решений для технологических процессов "
-"и систем, применяемых, как в лабораторных, так и в производственных "
-"масштабах."
-msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-
-#: .\main\templates\mainpage.html:108
-msgid "Филиалы"
-msgstr "строка переведенная на английский"
-
-#: .\main\templates\mainpage.html:110
-msgid ""
-"Компания «Карбон-Сервис» имеет филиалы в таких странах, как Германия, "
-"Украина, Бразилия. Руководство компании работает в направлении оптимизации "
-"реализации проектов, координирует выполнение проектов в реальном времени и "
-"всегда находится в контакте со своими клиентами."
-msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
-
-#: .\main\templates\mainpage.html:171
+#: .\main\templates\mainpage.html:154
 msgid ""
 "Сегодня компании «Карбон-Сервис» выполняет монтаж оборудования, "
 "поставляемого ведущими производителями на передовых предприятиях компаний "
 "производителей продукции:"
 msgstr ""
-"многострочный английский перевод "
-"многострочный английский перевод "
-"многострочный английский перевод"
+"Nowadays «CARBON-SERVICE» company maintains equipment, provided by leading "
+"manufacturers at advanced enterprises of leading producers:"
 
-#: .\templates\main.html:19
+#: .\news\models.py:6
+msgid "Заголовок на русском языке"
+msgstr ""
+
+#: .\news\models.py:7
+msgid "Заголовок на английском языке"
+msgstr ""
+
+#: .\news\models.py:9
+msgid "Краткое содержание на русском языке"
+msgstr ""
+
+#: .\news\models.py:10
+msgid "Краткое содержание на английском языке"
+msgstr ""
+
+#: .\news\models.py:11 .\showcase\models.py:22
+msgid "Содержание на русском языке"
+msgstr ""
+
+#: .\news\models.py:12 .\showcase\models.py:23
+msgid "Содержание на английском языке"
+msgstr ""
+
+#: .\news\templates\news.html:12 .\templates\main.html:23
 msgid "Новости"
+msgstr "News"
+
+#: .\showcase\models.py:10
+msgid "Краткое описание на русском языке"
+msgstr ""
+
+#: .\showcase\models.py:11
+msgid "Краткое описание на английском языке"
+msgstr ""
+
+#: .\showcase\models.py:12
+msgid "Полное описание на русском языке"
+msgstr ""
+
+#: .\showcase\models.py:13
+msgid "Полное описание на английском языке"
+msgstr ""
+
+#: .\showcase\models.py:24
+#, fuzzy
+#| msgid "Пищевая отрасль"
+msgid "Отрасль"
 msgstr "строка переведенная на английский"
 
-#: .\templates\main.html:22
-msgid "Фотогалерея"
-msgstr "строка переведенная на английский"
-
-#: .\templates\main.html:25
-msgid "Контакты"
-msgstr "строка переведенная на английский"
+#: .\templates\main.html:67
+msgid "Войти"
+msgstr "Login"

@@ -6,10 +6,10 @@
 <div id="news">
     {% if request.user.is_staff %}
         <a href="../admin/news/news/add/">
-            <button style="float: right; margin-top: 12px;"> Добавить </button>
+            <button style="float: right; margin-top: 12px;">{% trans 'Добавить' %} </button>
         </a>
     {% endif %}    
-    <p class="title">Новости</p>
+    <p class="title">{% trans 'Новости' %}</p>
     {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru' %}
         {% for news in news_list %}
         <a href="{% url 'news_detail' news_id=news.id %}">

@@ -1,14 +1,15 @@
 {% extends 'main.html' %}
+{% load staticfiles i18n %}
 {% load thumbnail %}
 {% load staticfiles %}
 {% block main %}    
 <div id="photos">   
     {% if request.user.is_staff %}
     <a href="../admin/galery/galeryitem/add/">
-        <button style="float: right; margin-top: 12px;"> Добавить </button>
+        <button style="float: right; margin-top: 12px;">{% trans 'Добавить' %} </button>
     </a>
     {% endif %}
-    <p class="title">Галерея</p>
+    <p class="title">{% trans 'Галерея' %}</p>
     <div id="popup">
         <div>
             <img src="" />

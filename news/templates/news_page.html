@@ -5,7 +5,7 @@
 {% if LANGUAGE_CODE == 'ru' or LANGUAGE_CODE == 'ru-ru'%} 
 <div id="newsfull">
     <p class="title">
-        {{ news.title_ru }}
+        <a href="/news">Новости » </a>{{ news.title_ru }}
         <div class="datetime" style="display: inline;">
             Опубликовано: {{ news.pub_date }}
         </div>
@@ -22,7 +22,7 @@
 {% else %}
 <div id="newsfull">
     <p class="title">
-        {{ news.title_en }}
+        <a href="/en/news">News » </a>{{ news.title_en }}
         <div class="datetime" style="display: inline;">
             Published: {{ news.pub_date }}
         </div>
