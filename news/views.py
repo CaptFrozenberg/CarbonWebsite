@@ -4,6 +4,9 @@ from django.views.generic.base import TemplateView
 from news.models import News
 
 class NewsView(TemplateView):
+    """
+    заменен на ArchiveIndexView
+    """
     template_name = 'news.html'
 
     def get_context_data(self, **kwargs):
