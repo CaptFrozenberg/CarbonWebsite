@@ -149,8 +149,8 @@ LOGIN_REDIRECT_URL = '/'
 # e-mail settings
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = "rodionov.zenitem@yandex.ru"
-EMAIL_HOST_PASSWORD = "Sveta2015SH"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
 EMAIL_USE_SSL = True
 
 SERVER_EMAIL = EMAIL_HOST_USER
